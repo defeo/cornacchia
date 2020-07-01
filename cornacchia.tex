@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,margin=1in,landscape]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{parcolumns}
+\usepackage[italian,american]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+
+\newcommand{\cols}[2]{\begin{parcolumns}[rulebetween]{2}%
+    \selectlanguage{italian}\colchunk{#1}%
+    \selectlanguage{american}\colchunk{#2}%
+  \end{parcolumns}}
+\newcommand{\colsni}[2]{\begin{parcolumns}[rulebetween,nofirstindent]{2}%
+    \selectlanguage{italian}\colchunk{#1}%
+    \selectlanguage{american}\colchunk{#2}%
+  \end{parcolumns}}
+
+
+\title{Su di un metodo per la risoluzione in numeri interi
+  dell'equazione\\
+  $\sum_{h=0}^nC_hx^{n-h}\cdot y^h=P$}
+\author{Dott. Giuseppe Cornacchia\\[1em]
+  translation by Luca De Feo}
+
+\begin{document}
+\maketitle
+
+\cols{Il metodo che andiamo ad esporre si fonda sul noto
+  \emph{algoritmo di Eulero} che si applica alla risoluzione
+  dell'equazione $ax+by=1$.
+  
+  Se si hanno due quantità indeterminate qualunque $a,b,$ e una serie
+  di altre quantità $\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu$,
+  e si forma con esse una nuova serie di quantità $c,d,e,\dots,l,m,n$
+  operando secondo la legge seguente:}
+{The method we're going to explain is funded on Euler's
+  well known algorithm, which applies to the solution of the
+  equation $ax+by=1$.
+  
+  If we have two arbitrary indeterminate quantities $a,b,$ and a
+  series of other quantities
+  $\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu$, and we form with
+  them a new series of quantities $c,d,e,\dots,l,m,n$ acting by the
+  following law:}
+
+\[c = \gamma b + a\quad
+  d = \delta c + b\quad
+  e = \varepsilon d + e,\dots,
+  n = \nu m + l\]
+
+\colsni{si potranno ottenere tutte le quantità $c,d,e,\dots,l,m,n,$
+  successivamente, in funzione di $a$ e $b$. In particolare:}
+%
+{we can obtain all quantities  $c,d,e,\dots,l,m,n,$
+  successively, as a function of $a$ e $b$. In particular:}
+
+\[n = Ga+Hb\]
+
+\colsni{dove $G,H$ sono funzioni di $\gamma,\delta,\varepsilon,\dots$
+  indipendenti da $a$ e $b$. Usando il simbolo di Gauss, si ha}
+%
+{where $G,H,$ are function of $\gamma,\delta,\varepsilon,\dots$
+  independent from $a$ and $b$. Using Gauss' symbol, we have}
+
+\[H = [\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu]\quad
+  G=[\delta,\varepsilon,\dots,\lambda,\mu,\nu].\]
+
+\cols{Le espressioni $H$ obbediscono a due semplici leggi di
+  formazione, l'una procedendo verso destra, l'altra verso sinistra,
+  che sono espresse dalle formule:}
+%
+{The expressions $H$ obey two simple laws, one proceding from the
+  right, the other from the left, as expressed by the formulas:}
+%
+\begin{align*}
+  [\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu] &=
+  \gamma[\delta,\varepsilon,\dots,\lambda,\mu,\nu] +
+  [\varepsilon,\dots,\lambda,\mu,\nu]\\
+  [\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu] &=
+  [\gamma,\delta,\varepsilon,\dots,\lambda,\mu]\nu +
+  [\gamma,\delta,\varepsilon,\dots,\lambda].
+\end{align*}
+
+\end{document}
