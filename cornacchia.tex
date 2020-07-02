@@ -5,6 +5,7 @@
 \usepackage{parcolumns}
 \usepackage[italian,american]{babel}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{fmtcount}
 
 \newcommand{\cols}[2]{\begin{parcolumns}[rulebetween]{2}%
     \selectlanguage{italian}\colchunk{#1}%
@@ -14,7 +15,6 @@
     \selectlanguage{italian}\colchunk{#1}%
     \selectlanguage{american}\colchunk{#2}%
   \end{parcolumns}}
-
 
 \title{Su di un metodo per la risoluzione in numeri interi
   dell'equazione\\
@@ -30,8 +30,8 @@
   dell'equazione $ax+by=1$.
   
   Se si hanno due quantità indeterminate qualunque $a,b,$ e una serie
-  di altre quantità $\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu$,
-  e si forma con esse una nuova serie di quantità $c,d,e,\dots,l,m,n$
+  di altre quantità $\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu$,
+  e si forma con esse una nuova serie di quantità $c,d,e,\ldots,l,m,n$
   operando secondo la legge seguente:}
 {The method we're going to explain is funded on Euler's
   well known algorithm, which applies to the solution of the
@@ -39,31 +39,31 @@
   
   If we have two arbitrary indeterminate quantities $a,b,$ and a
   series of other quantities
-  $\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu$, and we form with
-  them a new series of quantities $c,d,e,\dots,l,m,n$ acting by the
+  $\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu$, and we form with
+  them a new series of quantities $c,d,e,\ldots,l,m,n$ acting by the
   following law:}
 
 \[c = \gamma b + a\quad
   d = \delta c + b\quad
-  e = \varepsilon d + e,\dots,
+  e = \varepsilon d + e,\ldots,
   n = \nu m + l\]
 
-\colsni{si potranno ottenere tutte le quantità $c,d,e,\dots,l,m,n,$
+\colsni{si potranno ottenere tutte le quantità $c,d,e,\ldots,l,m,n,$
   successivamente, in funzione di $a$ e $b$. In particolare:}
 %
-{we can obtain all quantities  $c,d,e,\dots,l,m,n,$
+{we can obtain all quantities  $c,d,e,\ldots,l,m,n,$
   successively, as a function of $a$ e $b$. In particular:}
 
 \[n = Ga+Hb\]
 
-\colsni{dove $G,H$ sono funzioni di $\gamma,\delta,\varepsilon,\dots$
+\colsni{dove $G,H$ sono funzioni di $\gamma,\delta,\varepsilon,\ldots$
   indipendenti da $a$ e $b$. Usando il simbolo di Gauss, si ha}
 %
-{where $G,H,$ are function of $\gamma,\delta,\varepsilon,\dots$
+{where $G,H,$ are function of $\gamma,\delta,\varepsilon,\ldots$
   independent from $a$ and $b$. Using Gauss' symbol, we have}
 
-\[H = [\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu]\quad
-  G=[\delta,\varepsilon,\dots,\lambda,\mu,\nu].\]
+\[H = [\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu]\quad
+  G=[\delta,\varepsilon,\ldots,\lambda,\mu,\nu].\]
 
 \cols{Le espressioni $H$ obbediscono a due semplici leggi di
   formazione, l'una procedendo verso destra, l'altra verso sinistra,
@@ -73,12 +73,147 @@
   right, the other from the left, as expressed by the formulas:}
 %
 \begin{align*}
-  [\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu] &=
-  \gamma[\delta,\varepsilon,\dots,\lambda,\mu,\nu] +
-  [\varepsilon,\dots,\lambda,\mu,\nu]\\
-  [\gamma,\delta,\varepsilon,\dots,\lambda,\mu,\nu] &=
-  [\gamma,\delta,\varepsilon,\dots,\lambda,\mu]\nu +
-  [\gamma,\delta,\varepsilon,\dots,\lambda].
+  [\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu] &=
+  \gamma[\delta,\varepsilon,\ldots,\lambda,\mu,\nu] +
+  [\varepsilon,\ldots,\lambda,\mu,\nu]\\
+  [\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu] &=
+  [\gamma,\delta,\varepsilon,\ldots,\lambda,\mu]\nu +
+  [\gamma,\delta,\varepsilon,\ldots,\lambda].
 \end{align*}
+
+\cols{Si ha poi}{Then we have}
+
+\[[\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu] =
+  [\nu,\mu,\lambda,\ldots,\varepsilon,\delta,\gamma];\quad
+  [-\gamma,-\delta,-\varepsilon,\ldots,-\lambda,-\mu,-\nu] =
+  \pm[\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu].\]
+
+\cols{Queste espressioni sono della massima importanza nella teoria
+  delle frazioni continue. Infatti, se una frazione continua
+  ordinaria, i cui numeratori sono tutti uguali ad 1, si rappresenta
+  col simbolo
+  $(\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu,\ldots)$ talché
+  sia}
+%
+{}
+
+\[(\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu) =
+  \gamma+\frac{1}{(\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu)} =
+  \left(\gamma,\delta,\varepsilon,\ldots,\lambda,\mu+\frac{1}{\nu}\right)\]
+
+\colsni{si ottiene in generale, mediante riduzione:}{}
+
+\[(\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu) =
+  \frac{[\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu]}
+  {[\delta,\varepsilon,\ldots,\lambda,\mu,\nu]}.\]
+
+\cols{Se i numeri $\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu$
+  sono interi, altrettanto può dirsi dei numeratori e dei denominatori
+  delle frazioni}
+%
+{}
+
+\[\frac{[\gamma]}{[1]}, \frac{[\gamma,\delta]}{[\delta]},
+  \frac{[\gamma,\delta,\varepsilon]}{[\gamma,\delta]}, \ldots,
+  \frac{[\gamma,\delta,\varepsilon,\ldots,\lambda,\mu,\nu]}
+  {[\delta,\ldots,\lambda,\mu,\nu]},\]
+
+\colsni{ognuna delle quali è inoltre irreducibile.
+
+  Vediamo qualche altra propriétà delle espressioni sopra
+  accennate. ---Se, prese delle quantità $1,q_1,q_2,\ldots,q_{n-1},q_n$
+  si formano successivamente le espressioni:}
+%
+{}
+%
+\begin{gather*}
+  y_{n+1}=1\quad y_n=1\quad y_{n-1}=[1,q_1]\quad y_{n-2}=[1,q_1,q_2),\ldots\\
+  y_1=[1,q_1,q_3,\ldots,q_{n-1}]\quad;\quad
+  y_0=[1,q_1,q_2,\ldots,q_{n-1},q_n]
+\end{gather*}
+
+\colsni{e poi le epressioni}{}
+%
+\begin{gather*}
+  x_{n+1}=1\quad x_n=1\quad x_{n-1}=[1,q_n]\quad x_{n-2}=[1,q_n,q_{n-1}],\ldots\\
+  x_1=[1,q_n,q_{n-1},\ldots,q_2]\quad;\quad
+  x_0=[1,q_n,q_{n-1},\ldots,q_2,q_1]  
+\end{gather*}
+
+\colsni{dico che si ha:}{}
+%
+\begin{align}
+  &x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = P
+  &(r=0,1,2,\dots,n)
+  \tag{\(\alpha\)}\label{1.a}\\
+  &x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1} \equiv 0 \mod P
+  &\left(\begin{array}{c}r=0,1,\dots,n\\s=0,1,\dots,n\end{array}\right)
+  \tag{\(\beta\)}\label{1.b}
+\end{align}
+
+\colsni{avendo posto $P=x_0+x_1=y_0+y_1$. La \eqref{1.b} vale
+  naturalmente solo quando le $q$ sono numeri interi. ---Per la legge
+  esposta di formazione, si ha:}
+%
+{}
+
+\[x_{r+1} = x_{r-1} - q_r x_r \quad y_{n-r}=q_r y_{n-r+1} + y_{n-r+2}\]
+
+\colsni{posto}{}
+
+\[q_0 = 1 \quad x_{-1} = x_0 + x_1 = P.\]
+
+\cols{Sostituendo nel \ordinalnum{1} membro della \eqref{1.a},
+  avremo:}{}
+
+\[x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} =
+  x_r(q_r y_{n-r+1} + y_{n-r+1}) + y_{n-r+1}(x_{r-1} - q_r x_r) =
+  x_{r-1}\cdot y_{n-r+1} + x_r\cdot y_{n-r+2}\]
+
+\cols{Dunque l'espressione $x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1}$
+  non cambia valore mutando $r$ in $r-1$, e quindi neppure cambiando
+  $r$ in $r-\lambda (\lambda=0,1,2,\dots r)$.  Laonde:}
+%
+{}
+
+\[x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} =
+  x_{r-\lambda}\cdot y_{n-(r-\lambda)} + x_{(r-\lambda)+1}\cdot y_{n-(r-\lambda)+1}.\]
+
+\colsni{e per $r=\lambda$ si ha}{}
+
+\[x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = x_0 + x_1 = y_0 + y_1 = P.\]
+
+\cols{Così è dimostrata la \eqref{1.a}; dalla \eqref{1.b} si possono
+  come casi particolari estrarre le due congruenze}
+%
+{}
+%
+\begin{align}
+  x_r + (-1)^rx_1\cdot y_{n-r+1} &\equiv 0 \mod P
+  \tag{\(\beta_1\)}\label{2.a}\\
+  y_s + (-1)^s\cdot y_1 \cdot x_{n-s+1} &\equiv 0 \mod P
+  \tag{\(\beta_2\)}\label{2.b}
+\end{align}
+ 
+\colsni{le quali intanto sussistono, come si verifica subito, la
+  \ordinalnum{1}[f] per $r=0,1$; la \ordinalnum{2}[f] per
+  $s=0,1$. ---E col solito metodo da $r$ a $r+1$ (o da $s$ ad $s+1$)
+  valendosi delle relazioni che legano le quantità $x$ e le $y$, si
+  dimostra che sono vere per qualunque valore degli indici $r,s$
+  rispettivamente.--- Le \eqref{2.a}, \eqref{2.b} si possono anche
+  scrivere:}
+%
+{}
+%
+\begin{align}
+  x_r &\equiv - (-1)^rx_1\cdot y_{n-r-1} \mod P
+  \tag{\(\beta_1'\)}\label{3.a}\\
+  y_s &\equiv - (-1)^sy_1\cdot x_{n-s-1} \mod P
+  \tag{\(\beta_2'\)}\label{3.b}
+\end{align}
+
+\colsni{e moltiplicando membro a membro}{}
+
+\[x_r\cdot y_s \equiv (-1)^{r+s}\cdot x_1\cdot y_1\cdot y_{n-r+1}\cdot x_{n-s+1}.\]
 
 \end{document}
