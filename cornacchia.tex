@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt,leqno]{article}
 
 \usepackage[a4paper,margin=1in,landscape]{geometry}
 \usepackage[utf8]{inputenc}
@@ -215,5 +215,68 @@
 \colsni{e moltiplicando membro a membro}{}
 
 \[x_r\cdot y_s \equiv (-1)^{r+s}\cdot x_1\cdot y_1\cdot y_{n-r+1}\cdot x_{n-s+1}.\]
+
+\cols{Ma la \ref{3.a} dà per $r=n$}{}
+
+\[1 \equiv - (-1)^n x_1 \cdot y_1\]
+
+\colsni{e però, come si voleva:}
+
+\[x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1} \equiv 0 \mod P.\]
+
+\cols{Ciò posto, sia $P$ un intero qualunque, ed $a$ un numero primo
+  con $P$ e minore di $P$ ma maggiore di $\frac{1}{2}P$. Si applichi
+  alla coppia $(P,a)$ l'algoritmo della ricerca del M.C.D.; per
+  l'ipotesi posta si perverrà al resto $1$ dopo un numero finito $n$
+  di divisioni. Sia $q_0=1,q_1,q_2,\ldots,q_{n-1}$ la serie dei
+  quozienti; $x_1,x_2,\ldots,x_n=1$ la serie dei resti corrispondenti.
+
+  Posto $P=x_{-1},a=x_0,x_{n+1}=1,q_n=x_{n-1}-1$ avremo:}
+%
+{}
+
+\begin{equation}
+  \label{1}
+  x_{i-1} = q_i x_i + x_{i+1}.\qquad
+  (i=0,1,\ldots, n)
+\end{equation}
+
+\cols{Si ponga ora il sistema}{}
+
+\begin{equation}
+  \label{2}
+  y_{n-i} = q_i y_{n-i+1} + y_{n-i+2}\qquad
+  (i=0,1,\ldots, n)
+\end{equation}
+
+\colsni{a cui si aggiungano le condizioni $y_n=y_{n+1}=1$.
+
+  Si avrà allora, introducendo il simbolo di Gauss:}
+
+\[y_{n-i} = [1,q_1,q_2,\ldots,q_i]\qquad
+  x_{i-1} = [1,q_n,q_{n-1},\ldots,q_i].\]
+
+\cols{Richiamando le propriétà sopra dimostrate, avremo:}{}
+
+\begin{align}
+  &x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = x_0 + x_1 = y_0 + y_1 = P
+  &(r=0,1,2,\dots,n)
+  \tag{\ref{1.a}}\\
+  &x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1} \equiv 0 \mod P
+  &\left(\begin{array}{c}r=0,1,\dots,n\\s=0,1,\dots,n\end{array}\right)
+  \tag{\ref{1.b}}
+\end{align}
+
+\colsni{da cui in particolare per $r=s=1$}{}
+
+\[x_1\cdot y_1 \equiv (-1)^{n-1} \mod P\]
+
+\colsni{e ancora}{and}
+
+\[x_0\cdot y_0 \equiv (-1)^{n-1} \mod P.\]
+
+\cols{Si è trovata una soluzione $y=y$ della congruenza}{}
+
+\[ay \equiv \pm 1 \mod P.\]
 
 \end{document}
