@@ -2,6 +2,7 @@
 
 \usepackage[a4paper,margin=1in,landscape]{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{parcolumns}
 \usepackage[italian,american]{babel}
 \usepackage{amsmath,amssymb,amsthm}
@@ -279,4 +280,66 @@
 
 \[ay \equiv \pm 1 \mod P.\]
 
+\cols{Ponendo mente alle relazioni ricorrenti~\eqref{2} e ricordando
+  che $y_0+y_1=P$, si scorge come i numeri $y_1,y_2,\dots,y_n=1$ sono
+  i resti delle successive divisioni che si ottengono applicando ai
+  numeri $(P,y_0)$ l'algoritmo della ricerca del M.C.D. Si ha poi
+  $x_0>\frac{1}{2}P,y_0>\frac{1}{2}P$. Se $n$ è dispari, allora
+  $x_0 y_0 \equiv 1\mod P$, cioè la radice della congruenza}
+%
+{}
+
+\[x_0 y \equiv 1 \mod P\]
+
+\colsni{è maggiore di $\frac{1}{2}P$; se $n$ è pari, si ha
+  $x_0y\equiv -1, x_0 y_1 \equiv 1 \mod P$; in questo caso la radice
+  $y_1$ della congruenza $x_0y\equiv 1 \mod P$ è $<\frac{1}{2}P$. Dopo
+  ciò possiamo enunciare:
+
+  \guillemotleft Dato un intero qualunque $P$ e un numero
+  $x_0<\frac{1}{2}P$, primo con $P$ e inferiore ad esso, sia $y_0$ la
+  radice della congruenza}
+%
+{}
+
+\[x_0 y \equiv 1\mod P\]
+
+\colsni{in altri termini, sia $y_0$ il \emph{coniugato} di
+  $x_0\mod P$: applicando ai numeri $(P,x_0)$ l'algoritmo della
+  ricerca del M.C.D. si perviene al resto $1$ dopo un numero $n$ di
+  divisioni pari o dispari, secondo che
+  $y_0\lessgtr\frac{1}{2}P$. ---In ogni caso, applicando lo stesso
+  procedimento ai numeri $(P,y_0)$
+  $\left\{ \text{oppure } (P,P-y_0) \text{ se } y_0<\frac{1}{2}P
+  \right\}$ si perviene al resto $1$ dopo lo stesso numero $n$ di
+  divisioni.--- Le due successioni dei resti e dei quotienti godono le
+  seguenti proprietà:
+
+  Nei due sistemi di divisioni il \ordinalnum{2} quoziente dell'un
+  sistema è uguale al penultimo resto dell'altro, diminuito di 1. ---I
+  quozienti della \ordinalnum{1}[f] successione, a cominciare dal
+  terzo, si riproducono nella \ordinalnum{2}[f] in ordine inverso.
+
+  La somma dei prodotti in croce di due resti consecutivi del
+  \ordinalnum{1} sistema, e dei corrispondenti nel \ordinalnum{2}
+  occupanti i posti complementari ad $n+1$ (cioè se i primi due resti
+  occupano i posti $t,t+1$, i corrispondenti occuperanno i posti
+  $n-t,n-t+1$) è uguale a $P$.
+
+  Presi due resti qualunque $x_r,y_s$, l'uno del \ordinalnum{1}
+  sistema, l'altro del \ordinalnum{2}, e i loro rispettivi
+  complementari $x_{n-s+1},y_{n-r+1}$, si ha}
+%
+{}
+
+\[x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1}\equiv 0 \mod P.\]
+
+\cols{In particolare, presi due resti $x_r,x_{n-r+1}$ del
+  \ordinalnum{1} sistema equidistanti dagli estremi, e i
+  corrispondenti $y_r,y_{n-r+1}$ nel \ordinalnum{2}, si ha:}
+%
+{}
+
+\[x_r\cdot y_r + (-1)^n x_{n-r+1}\cdot y_{n-r+1}\equiv 0 \mod P.\]
+  
 \end{document}
