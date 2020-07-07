@@ -146,13 +146,13 @@
 \begin{align}
   &x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = P
   &(r=0,1,2,\dots,n)
-  \tag{\(\alpha\)}\label{1.a}\\
+  \tag{\(\alpha\)}\label{alpha}\\
   &x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1} \equiv 0 \mod P
   &\left(\begin{array}{c}r=0,1,\dots,n\\s=0,1,\dots,n\end{array}\right)
-  \tag{\(\beta\)}\label{1.b}
+  \tag{\(\beta\)}\label{beta}
 \end{align}
 
-\colsni{avendo posto $P=x_0+x_1=y_0+y_1$. La \eqref{1.b} vale
+\colsni{avendo posto $P=x_0+x_1=y_0+y_1$. La \eqref{beta} vale
   naturalmente solo quando le $q$ sono numeri interi. ---Per la legge
   esposta di formazione, si ha:}
 %
@@ -164,7 +164,7 @@
 
 \[q_0 = 1 \quad x_{-1} = x_0 + x_1 = P.\]
 
-\cols{Sostituendo nel \ordinalnum{1} membro della \eqref{1.a},
+\cols{Sostituendo nel \ordinalnum{1} membro della \eqref{alpha},
   avremo:}{}
 
 \[x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} =
@@ -184,16 +184,16 @@
 
 \[x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = x_0 + x_1 = y_0 + y_1 = P.\]
 
-\cols{Così è dimostrata la \eqref{1.a}; dalla \eqref{1.b} si possono
+\cols{Così è dimostrata la \eqref{alpha}; dalla \eqref{beta} si possono
   come casi particolari estrarre le due congruenze}
 %
 {}
 %
 \begin{align}
   x_r + (-1)^rx_1\cdot y_{n-r+1} &\equiv 0 \mod P
-  \tag{\(\beta_1\)}\label{2.a}\\
+  \tag{\(\beta_1\)}\label{beta1}\\
   y_s + (-1)^s\cdot y_1 \cdot x_{n-s+1} &\equiv 0 \mod P
-  \tag{\(\beta_2\)}\label{2.b}
+  \tag{\(\beta_2\)}\label{beta2}
 \end{align}
  
 \colsni{le quali intanto sussistono, come si verifica subito, la
@@ -201,23 +201,23 @@
   $s=0,1$. ---E col solito metodo da $r$ a $r+1$ (o da $s$ ad $s+1$)
   valendosi delle relazioni che legano le quantità $x$ e le $y$, si
   dimostra che sono vere per qualunque valore degli indici $r,s$
-  rispettivamente.--- Le \eqref{2.a}, \eqref{2.b} si possono anche
+  rispettivamente.--- Le \eqref{beta1}, \eqref{beta2} si possono anche
   scrivere:}
 %
 {}
 %
 \begin{align}
   x_r &\equiv - (-1)^rx_1\cdot y_{n-r-1} \mod P
-  \tag{\(\beta_1'\)}\label{3.a}\\
+  \tag{\(\beta_1'\)}\label{beta1'}\\
   y_s &\equiv - (-1)^sy_1\cdot x_{n-s-1} \mod P
-  \tag{\(\beta_2'\)}\label{3.b}
+  \tag{\(\beta_2'\)}\label{beta2'}
 \end{align}
 
 \colsni{e moltiplicando membro a membro}{}
 
 \[x_r\cdot y_s \equiv (-1)^{r+s}\cdot x_1\cdot y_1\cdot y_{n-r+1}\cdot x_{n-s+1}.\]
 
-\cols{Ma la \ref{3.a} dà per $r=n$}{}
+\cols{Ma la \ref{beta1'} dà per $r=n$}{}
 
 \[1 \equiv - (-1)^n x_1 \cdot y_1\]
 
@@ -262,10 +262,10 @@
 \begin{align}
   &x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = x_0 + x_1 = y_0 + y_1 = P
   &(r=0,1,2,\dots,n)
-  \tag{\ref{1.a}}\\
+  \tag{\ref{alpha}}\\
   &x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1} \equiv 0 \mod P
   &\left(\begin{array}{c}r=0,1,\dots,n\\s=0,1,\dots,n\end{array}\right)
-  \tag{\ref{1.b}}
+  \tag{\ref{beta}}
 \end{align}
 
 \colsni{da cui in particolare per $r=s=1$}{}
@@ -341,5 +341,75 @@
 {}
 
 \[x_r\cdot y_r + (-1)^n x_{n-r+1}\cdot y_{n-r+1}\equiv 0 \mod P.\]
-  
+
+\cols{Vediamo ora due casi particolari notevoli. Supponiamo in primo
+  luogo che si abbia}
+%
+{}
+
+\[x_0^2 \equiv 1 \mod P\]
+
+\colsni{cioé sia $x_0$ coniugato di se stesso. ---Allora $y_0=x_0$; e
+  poiché $x_0 y_0 \equiv (-1)^{n-1} \mod P$, se ne deduce che dovrà
+  essere $n$ dispari. Intanto possiamo dunque dire che se
+  $x_0>\frac{1}{2}P$ è coniugato di se stesso $\mod P$, applicando ai
+  numeri $P,x_0$ l'algoritmo della ricerca del M.C.D., si perviene al
+  resto $1$ dopo un numero dispari $n$ di divisioni. ---Siccome poi
+  abbiamo trovato che i numeri $y_1,y_2,\ldots,y_{n-1},y_n=1$ sono i
+  resti delle divisioni che si ottengono applicando l'algoritmo della
+  ricerca del M.C.D. ai numeri $P,y_0$, ne consegue, essendo qui
+  $y_0=x_0$, che i resti $y$ coincidono coi corrispondenti $x$ del
+  sistema di divisioni $(P,x_0)$.--- La relazione~\eqref{alpha}
+  diventa allora:}
+%
+{}
+
+\begin{equation}
+  \tag{\(\alpha'\)}\label{alpha'}
+  x_r\cdot x_{n-r} + x_{r+1}\cdot x_{n-r+1} = P
+\end{equation}
+
+\colsni{e la~\eqref{beta}}{}
+
+\begin{equation}
+  \tag{\(\beta'\)}\label{beta'}
+  x_r\cdot x_s - (-1)^{r+s}\cdot x_{n-r+1}\cdot x_{n-s+1} \equiv 0 \mod P
+\end{equation}
+
+\colsni{dalla quale, per $r=s$ si trae l'altra:}
+
+\begin{equation}
+  \tag{\(\gamma'\)}\label{gamma'}
+  x_r^2 - x_{n-r+1}^2 \equiv 0 \mod P.
+\end{equation}
+
+\cols{Il resto intermedio del sistema sarà $x_\frac{n+1}{2}$. Ponendo
+  nella~\eqref{alpha'} $r=\frac{n+1}{2}$, si avrà:}
+%
+{}
+
+\begin{equation}
+  \tag{\(\delta'\)}\label{delta'}
+  x_{\frac{n+1}{2}}\left(x_{\frac{n-1}{2}} + x_{\frac{n+3}{2}}\right) = P
+\end{equation}
+
+\colsni{dunque il resto intermedio è un divisore di $P$.
+
+  Le relazioni $x_i=y_i$ insieme
+  alle~\eqref{alpha'},~\eqref{beta'},~\eqref{gamma'},~\eqref{delta'}
+  che ne abbiamo dedotte, si traducono nelle seguenti proprietà:
+
+  \guillemotleft{} Dato un numero $P$, sia $x_0>\frac{P}{2}$ una
+  radice della congruenza}
+%
+{}
+
+\[x^2\equiv 1 \mod P.\]
+
+\cols{Applicando ai numeri $P,x_0$ l'algoritmo della ricerca del
+  M.C.D., la successione dei quozienti e quella dei resti godono delle
+  seguenti proprietà:}
+%
+{}
+
 \end{document}
