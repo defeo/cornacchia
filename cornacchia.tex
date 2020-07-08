@@ -412,4 +412,75 @@
 %
 {}
 
+\cols{Il numero delle divisioni che bisogna eseguire per giungere al
+  resto $1$ è sempre dispari.
+
+  Il \ordinalnum{2} quoziente è uguale al penultimo resto diminuito di $1$.
+
+  Fatta astrazione dei due primi quozienti, nella successione dei
+  restanti i quozienti equidistanti dagli estremi sono eguali.
+
+  La somma dei prodotti in croce di due resti consecutivi qualunque, e
+  dei corrispondenti equidistanti dagli estremi, è uguale a $P$.
+
+  Il resto intermedio è un divisore di $P$.
+
+  La somma o differenza dei prodotti di due resti qualunque, e dei
+  corrispondenti equidistanti dagli estremi, è multipla di $P$.
+
+  Una coppia qualunque di resti equidistanti dagli estremi soddisfa
+  alla congruenza}
+%
+{}
+
+\[x^2-y^2\equiv 0 \mod P.\text{ \guillemotright}\]
+
+\cols{Adunque la conseguenza dei divisori di $P$ e delle soluzioni
+  della congruenza $x^2-y^2\equiv 0 \mod P$ dipende dalla conoscenza
+  delle radici della congruenza}
+%
+{}
+
+\[x^2\equiv 1 \mod P.\]
+
+\cols{---Come secondo caso notevole, supponiamo che $x_0$ soddisfi
+  alla congruenza}
+%
+{}
+
+\[x_0^3 + 1 \equiv 0 \mod P\]
+
+\colsni{allora}{then}
+
+\[x_0^2 \equiv -1 \mod P.\]
+
+\cols{Ma è pure}{}
+
+\[x_0 y_0\equiv (-1)^{n-1} \mod P\quad \left(
+    \begin{array}{c}
+      P > x_0 > \frac{P}{2}\\
+      P > y_0 > \frac{P}{2}
+    \end{array}
+  \right)\]
+
+\colsni{se ne trae che dovrá essere $n$ pari ed $y_0=x_0$.
+
+  Per quanto abbiamo osservato, le $y_1,y_2,\ldots,y_{n-1},y_n=1$
+  coincidono con le corrispondenti $x_1,x_2,\ldots,x_n=1$; poichè qui
+  $(P,x_0)=(P,y_0)$, simboleggiando con $(P,x_0),(P,y_0)$ i due
+  sistemi di divisioni che bisogna eseguire per trovare il M.C.D. (il
+  quale è $1$) tra i numeri $P,x_0$; e rispettivamente $P,y_0$. Le
+  relazioni~\eqref{alpha},~\eqref{beta}}
+%
+{}
+
+\begin{align*}
+  &x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = P\\
+  &x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1} \equiv 0 \mod P
+\end{align*}
+
 \end{document}
+
+% Local Variables:
+% ispell-dictionary: italian
+% End:
