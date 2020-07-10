@@ -8,6 +8,12 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{fmtcount}
 
+\newtheorem{coroen}{Corollary}
+\newtheorem{coroit}{Corollario}
+\newenvironment{corollary}
+{\iflanguage{italian}{\coroit}{\coroen}}
+{\iflanguage{italian}{\endcoroit}{\endcoroen}}
+
 \newcommand{\cols}[2]{\begin{parcolumns}[rulebetween]{2}%
     \selectlanguage{italian}\colchunk{#1}%
     \selectlanguage{american}\colchunk{#2}%
@@ -16,6 +22,14 @@
     \selectlanguage{italian}\colchunk{#1}%
     \selectlanguage{american}\colchunk{#2}%
   \end{parcolumns}}
+
+\newcommand{\footnotecols}[2]{\footnotetext{%
+    \begin{minipage}{0.95\linewidth}\cols{#1}{#2}\end{minipage}%
+}}
+
+\newcommand\secbreak{%
+  \par\bigskip\noindent\hfill\rule{15em}{0.1px}\hfill\null\par\bigskip
+}
 
 \title{Su di un metodo per la risoluzione in numeri interi
   dell'equazione\\
@@ -385,7 +399,7 @@
 
 \cols{Il resto intermedio del sistema sarà $x_\frac{n+1}{2}$. Ponendo
   nella~\eqref{alpha'} $r=\frac{n+1}{2}$, si avrà:}
-%
+% 
 {}
 
 \begin{equation}
@@ -401,7 +415,7 @@
 
   \guillemotleft{} Dato un numero $P$, sia $x_0>\frac{P}{2}$ una
   radice della congruenza}
-%
+% 
 {}
 
 \[x^2\equiv 1 \mod P.\]
@@ -409,7 +423,7 @@
 \cols{Applicando ai numeri $P,x_0$ l'algoritmo della ricerca del
   M.C.D., la successione dei quozienti e quella dei resti godono delle
   seguenti proprietà:}
-%
+% 
 {}
 
 \cols{Il numero delle divisioni che bisogna eseguire per giungere al
@@ -430,7 +444,7 @@
 
   Una coppia qualunque di resti equidistanti dagli estremi soddisfa
   alla congruenza}
-%
+% 
 {}
 
 \[x^2-y^2\equiv 0 \mod P.\text{ \guillemotright}\]
@@ -438,14 +452,14 @@
 \cols{Adunque la conseguenza dei divisori di $P$ e delle soluzioni
   della congruenza $x^2-y^2\equiv 0 \mod P$ dipende dalla conoscenza
   delle radici della congruenza}
-%
+% 
 {}
 
 \[x^2\equiv 1 \mod P.\]
 
 \cols{---Come secondo caso notevole, supponiamo che $x_0$ soddisfi
   alla congruenza}
-%
+% 
 {}
 
 \[x_0^3 + 1 \equiv 0 \mod P\]
@@ -471,13 +485,154 @@
   sistemi di divisioni che bisogna eseguire per trovare il M.C.D. (il
   quale è $1$) tra i numeri $P,x_0$; e rispettivamente $P,y_0$. Le
   relazioni~\eqref{alpha},~\eqref{beta}}
-%
+% 
 {}
 
 \begin{align*}
   &x_r\cdot y_{n-r} + x_{r+1}\cdot y_{n-r+1} = P\\
   &x_r\cdot y_s + (-1)^{n+r+s}\cdot x_{n-s+1}\cdot y_{n-r+1} \equiv 0 \mod P
 \end{align*}
+
+\colsni{diventano qui, considerando che $n$ è pari:}{}
+
+\begin{align*}
+  &x_r\cdot x_{n-r} + x_{r+1}\cdot x_{n-r+1} = P
+  \tag{\(\alpha''\)}\label{alpha''}\\
+  &x_r\cdot s_s + (-1)^{r+s}\cdot x_{n-r+1}\cdot x_{n-s+1} \equiv 0 \mod P.
+    \tag{\(\beta''\)}\label{beta''}
+\end{align*}
+
+\cols{Dalla~\eqref{beta''} si ha in particolare per $r=s$}
+%
+{}
+
+\begin{equation}
+  x_r^2 + x_{n-r+1}^2 \equiv 0 \mod P.
+  \tag{\(\gamma''\)}\label{gamma''}
+\end{equation}
+
+\cols{I resti intermedii sono $x_{\frac{n}{2}}, x_{\frac{n+2}{2}}$;
+  ponendo nella~\eqref{alpha''} $r=\frac{n}{2}$, si ha:}
+%
+{}
+
+\begin{equation}
+  x_{\frac{n}{2}}^2 +  x_{\frac{n+2}{2}}^2 = P.
+  \tag{\(\delta''\)}\label{delta''}
+\end{equation}
+
+\cols{Dunque i resti intermedii soddisfano all'equazione:}
+%
+{}
+
+\[x^2 + y^2 = P.\]
+
+\cols{Le relazioni $x_i=y_i$ insieme con
+  le~\eqref{alpha''},~\eqref{beta''},~\eqref{gamma''},~\eqref{delta''},
+  che ne abbiamo dedotte, si traducono nelle seguenti proprietà:
+
+  \guillemotleft{} Dato un numero $P$, sia $x_0>\frac{P}{2}$ una
+  radice della congruenza $x^2+1\equiv 0\mod P$, supposta
+  solubile. Applicando ai numeri $P,x_0$ l'algoritmo della ricerca del
+  M.C.D. si perviene al resto $1$ dopo un numero pari $n$ di
+  divisioni.
+
+  La successione dei quozientii e quella dei resti godono le seguentti
+  proprietà:
+
+  Il \ordinalnum{2} quoziente è uguale al penultimo resto diminuito di
+  $1$.
+
+  Fatta astrazione dai due primi quozienti, nella successione dei
+  restanti i quozienti equidistanti dagli estremi sono uguali.
+
+  La somma dei prodotti in croce di due resti consecutivi qualunque e
+  dei corrispondenti equidistanti dagli estremi è uguale a $P$.
+
+  La somma o differenza dei prodotti di due resti qualunque e dei
+  corrispondenti equidistantii dagli estremi è multipla di $P$.
+
+  Una coppia qualunque di resti equidistanti dagli estremi soddisfa
+  alla congruenza  
+}
+
+\[x^2 + y^2 \equiv 0 \mod P.\]
+
+\cols{La coppia dei resti intermedii soddisfa all'equazione:}
+%
+{}
+
+\[x^2 + y^2 = P\]
+
+\cols{Il metodo esposto fa dunque dipendere la conoscenza delle
+  soluzioni di quest'ultima equazione dalla conoscenza delle radici
+  della congruenza}
+%
+{}
+
+\[x^2+1\equiv 0 \mod P;\]
+
+\colsni{per ogni radice $x_0$ di questa congrenza si trova una
+  soluzione dell'equazione $x^2+y^2=P$; a radici diverse corrispondono
+  soluzioni diverse. Operando su tutte le radici $x_0>\frac{P}{2}$
+  della congruenza $x^2+1\equiv 0\mod P$ si otterranno altrettante
+  soluzioni distinte dell'equazione}
+%
+{}
+
+\[x^2+y^2=P\]
+
+\colsni{(vedremo più avanti che con questo metodo si ottengono
+  \emph{tutte le soluzioni proprie}).
+
+  \begin{corollary}
+    Siccome per ogni numero primo $p$ della forma $4k+1$ è sempre
+    solubile la congruenza $x^2+1\equiv 0 \mod P$, se ne deduce:
+
+    Ogni numero primo della forma $4k+1$ è sempre scomponibile nella
+    somma di due quadrati interi.\footnotemark
+  \end{corollary}
+}
+%
+{(we will see later that with this method we obtain \emph{all proper
+    solutions}).
+
+  \begin{corollary}
+    Since for every prime number $p$ of the form $4k+1$ the congruence
+    $x^2+1\equiv 0 \mod P$ always has a solution, we deduce:
+
+    Every prime number of the form $4k+1$ is always decomposoable as a
+    sum of two square integers.\footnotemark[\thefootnote]
+  \end{corollary}
+}
+%
+\footnotecols{Vedremo più innanzi come questa scomposizione sia
+  unica.}{We will see later that this decomposition is unique.}
+
+\secbreak
+
+\cols{Ripigliamo le relazioni}
+
+\begin{align}
+  \tag{\ref{1}}
+  x_{i-1} &= q_i x_i + x_{i+1}\\
+  &&(i=0,1,2,\ldots, n)\notag\\
+  \tag{\ref{2}}
+  y_{n-i} &= q_i y_{n-i+1} + y_{n-i+2}.
+\end{align}
+
+\cols{Si abbia una congruenza della forma:}
+
+\[\sum_{h=0}^n C_h x^{n-h}\cdot y^h \equiv 0 \mod P\]
+
+\colsni{nella quale im primo membro è dunque una frazione (razionale
+  intera) omogenea di grado $n$ nelle $x,y$ a coefficienti
+  interi. Supponiamo che $x=x_1,y=1$, ne sia una soluzione, cioè che si
+  abbia:}
+%
+{}
+
+\[\sum_{h=0}^n C_h x_1^{n-h} \equiv 0 \mod P\]
 
 \end{document}
 
