@@ -634,8 +634,201 @@
 
 \[\sum_{h=0}^n C_h x_1^{n-h} \equiv 0 \mod P\]
 
+\colsni{dico che sussisterà pure la congruenza}{}
+
+\[\sum (-1)^{h(i-1)}\cdot C_h x_i^{n-h}\cdot y_{n-i+1}^h\equiv 0 \mod P.
+  \qquad (i=1,2,\ldots,n)\]
+
+\cols{Abbiamo dimostrato che}{}
+
+\[x_i \equiv (-1)^{i-1}x_i\cdot y_{n-i+1} \mod P.\]
+
+\cols{Avremo pertanto}
+
+\begin{equation*}
+  \sum (-1)^{h(i-1)}\cdot C_h x_i^{n-h} \cdot y_{n-i+1}^h \equiv
+  \sum (-1)^{h(i-1)}\cdot C_h (-1)^{(n-h)(i-1)} \cdot x_1^{n-h} \cdot y_{n-i+1}^h  \equiv
+  (-1)^{n(i-1)}\cdot y_{n-i+1}^n \cdot \sum_{h=0}^n C_h x_1^{n-h} \equiv 0 \mod P.
+\end{equation*}
+
+\cols{Concludiamo:
+
+  Data una congruenza di grado $n$
+  $\sum_{h=0}^nC_h x^{n-h}\equiv 0 \mod P$, ne sia $x_1<\frac{P}{2}$
+  una radice. Posto $x+0=P-x_1$, sia $y_0>\frac{P}{2}$ la radice della
+  congruenza $x_0y\equiv\pm 1\bmod P$ (che si calcola col procedimento
+  sopra esposto): si applichi l'algoritmo della ricerca del
+  M.C.D. alle due coppie $(P,x_0)$, $(P,y_0)$ (e basta far ciò per la
+  prima coppia): sia $n$ il numero delle divisioni eseguite per
+  giungere al resto $1$. Sia $x_1$ \footnotemark{} la serie dei resti
+  del sistema $(P,x_0)$; $y_{n-i+1}$ quella del sistema $(P,y_0)$
+  $(i=1,2,\dots,n)$.
+
+  Allora
+}
+%
+{}
+\footnotetext{$x_i$, maybe?}
+
+\[\sum_{h=0}^n (-1)^{h(i-1)} \cdot C_h x_i^{n-h} \cdot y_{n-i+1}^h \equiv 0 \mod P\]
+
+\colsni{cioè}{}
+
+\[\sum_{h=0}^n (-1)^{h(i-1)}\cdot C_h x_i^{n-h} \cdot y_{n-i+1}^h = k_i \cdot P.\]
+
+\cols{Se uno dei $k_i$ fosse uguale ad $1$, avremmo così ottenuta una
+  soluzione dell'equazione}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{binhomform}
+  \sum_{h-0}^n C_h x^{n-h}\cdot y^h = P
+\end{equation}
+
+\colsni{il primo membro della quale è una forma binaria omogenea di grado $n$.
+
+  Geometricamente la~\eqref{binhomform} è l'equazione di una curva
+  algebrica di ordine $n$ che presenta le seguenti particolarità:
+
+  Le tangenti nei punti all'$\infty$ hanno ciascuna con la curva un
+  contatto $(\widetilde{n-1})$ punto e passano tutte per l'origine.
+
+  Ogni retta per l'origine incontra la curva in un solo punto reale,
+  se $n$ è dispari, in due soli punti reali se $n$ è pari.
+
+  In quest'ultimo caso l'origine è centro di simmetria per la curva.
+
+  Per vedere se col metodo delle divisioni successive sopra accennato
+  si possa ottenere una soluzione della~\eqref{binhomform}, noi
+  dovremo fare il cammino inverso, mostrando come da una soluzione di
+  essa equazione possa dedursi una radice della congruenza
+}
+%
+{}
+
+\[\sum_{h=0}^n C_h x^{n-h} \equiv 0 \mod P.\]
+
+\cols{Sia dunque $(x_0,y_0)$ una soluzione propria
+  della~\eqref{binhomform} (cioè con $x_0,y_0$ primi tra loro):
+  supponiamo inoltre che $x_0$ sia primo con $C_n$ ed $y_0$ con $C_0$,
+  altrimenti si potrebbe nella~\eqref{binhomform} raccogliere fuori di
+  $\sum$ un fattore che dovrebbe dividere anche $P$.
+
+  Di più nella~\eqref{binhomform} i coefficienti $C_h$ potranno essere
+  in parte nulli, non però $C_0$ e $C_n$, altrimenti si potrebbe
+  raccogliere fuori del segno di sommatoria una delle variabili $x,y$;
+  il che noi vogliamo escludere.
+
+  Ciò posto, distinguiamo due casi:
+
+  I. $C_0$ e $C_n$ hanno lo stesso segno: possiamo allora supporre
+  senz'altro $C_0$ e $C_n$ entrambi positivi: si divida
+  $C_n y_0^{n-1}$ per $x_0$, e sia $q_0$ il quoziente, $x_1$ il resto,
+  talché }
+%
+{}
+
+\[C_n y_0^{n-1} - q_0 x_0 = x_1.\]
+
+\cols{Si divida similmente $C_0 x_0^{n-1}$ per $y_0$, e sia $t_0$ il
+  quoziente, $y_1$ il resto, di guisa che:}
+
+\[C_0 x_0^{n-1} - t_0 y_0 = y_1.\]
+
+\cols{Per le ipotesi poste sarà $x_0$ primo con $x_1$, $y_0$ con
+  $y_1$. Applichiamo alle due coppie $(x_0,x_1)$, $(y_0,y_1)$
+  l'algoritmo della ricerca del M.C.D., e siano}
+%
+{}
+
+\begin{gather*}
+  \left\{
+    \begin{array}{l l l l l}
+      x_2 & x_3 & \cdots & x_{r-1} & x_r=1\\
+      q_2 & q_3 & \cdots & q_{r-1} & q_r
+    \end{array}
+  \right.\\
+  \left\{
+    \begin{array}{l l l l l}
+      y_2 & y_3 & \cdots & y_{s-1} & y_s=1\\
+      t_2 & t_3 & \cdots & t_{s-1} & t_s
+    \end{array}
+  \right.
+\end{gather*}
+
+\colsni{le successioni dei resti e dei quozienti nei sistemi di
+  divisioni $(x_0,x_1)$, $(y_0,y_1)$ rispettivamente.
+
+  Si avranno le relazioni}
+%
+{}
+
+\begin{align}
+  \tag{\ref{alpha}}
+  x_i - q_{i+2} x_{i+1} &= x_{i+2} & (i=0,1,2,\ldots,r-1)\\
+  \tag{\ref{beta}}
+  y_j - t_{j+2} y_{j+1} &= y_{j+2} & (j=0,1,2,\ldots,s-1)
+\end{align}
+
+\colsni{con l'avvertenza di porre $x_{r+1}=1$\hfill
+  $q_{r+1}=x_{r-1}-1$\hfill $y_{s+1}=1$\hfill $t_{s+1}=y_{s-1}-1$.
+
+  Ciò posto, poniamo i due sistemi:}
+%
+{}
+
+\begin{align}
+  \tag{\ref{alpha'}}
+  x_{s+1-\rho}' - t_{s+1-\rho}x_{s-\rho}' &= x_{s-\rho-1}'
+  &(\rho=0,1,2,\ldots,s)\\
+  \tag{\ref{beta'}}
+  y_{r+1-\lambda}' - q_{r+1-\lambda}y_{r-\lambda}' &= y_{r-\lambda-1}'
+  &(\lambda=0,1,2,\ldots,r)
+\end{align}
+
+\colsni{con l'avvertenza di fare $x_0'=x_0$\hfill $x_{-1}'=x_1$\hfill
+  $y_0'=y_0$\hfill $y_{-1}'=y_1$}
+%
+{}
+
+\[q_1 = t_1 = q_0 + t_0 + \sum_{h=1}^{n-1} C_h x_0^{n-h-1} \cdot y_0^{h-1}\]
+
+\colsni{con ciò abbiamo due sistemi lineari, l'uno di $s+1$ equazioni
+  ad $s+1$ incognite $x_1', x_2', \ldots, x_{s+1}'$; l'altro di $r+1$
+  equazioni ad altrettante incognite $y_1',y_2',\ldots,y_{r+1}'$, le
+  quali si possono determinare man mano per via ricorrente. Introdotto
+  il simbolo di Gauss, si trova precisamente:}
+%
+{}
+
+\begin{align}
+  \tag{1}\label{contfrac1}
+  x_{s+1-\rho}' &= [1, q_{r+1}, q_r, q_{r-1}, \ldots, q_2, t_1, t_2, \ldots, t_{s+1-\rho}]\\
+  \tag{2}\label{contfrac2}
+  y_{r+1-\lambda}' &= [1, t_{s+1}, t_s, t_{s-1}, \ldots, t_2, q_1, q_2, \ldots, q_{r+1-\lambda}]
+\end{align}
+
+\cols{mentre si ha}{}
+
+\begin{align}
+  \tag{3}\label{contfrac3}
+  x_i &= [1, q_{r+1}, q_r, q_{r-1}, \ldots, q_{i+2}]
+  &(i=0,1,2,\ldots,r-1)\\
+  \tag{4}\label{contfrac4}
+  y_j &= [1, t_{s+1}, t_s, t_{s-1}, \ldots, t_{j+2}].
+  &(j=0,1,2,\ldots,s-1)
+\end{align}
+
+\cols{Possiamo riunire le $x$ accentate e non accentate, e similmente
+  le $y$, attribuendo un unico index variabile da $m=r+s+1$ a zero;
+  corrispondentemente si possono denotare con una sola lettera $q$
+  affetta da indici, i quozienti $q_i$ e $t_j$;}
+% 
+{}
+
 \end{document}
 
 % Local Variables:
-% ispell-dictionary: italian
+% ispell-local-dictionary: "italian"
 % End:
