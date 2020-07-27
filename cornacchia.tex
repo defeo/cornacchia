@@ -823,8 +823,73 @@
 \cols{Possiamo riunire le $x$ accentate e non accentate, e similmente
   le $y$, attribuendo un unico index variabile da $m=r+s+1$ a zero;
   corrispondentemente si possono denotare con una sola lettera $q$
-  affetta da indici, i quozienti $q_i$ e $t_j$;}
+  affetta da indici, i quozienti $q_i$ e $t_j$; allora le
+  relazioni~\eqref{contfrac1},~\eqref{contfrac2}~\eqref{contfrac3},~\eqref{contfrac4}
+  possono raccogliersi nelle sole:}
 % 
+{}
+
+\begin{align}
+  \tag{\ref{contfrac1}}
+  x_i = [1, q_m, q_{m-1}, q_{m-2}, \ldots, q_{i+1}]\\
+  \notag && (i=m-1,m-2,\ldots,2,1,0)\\
+  \tag{\ref{contfrac2}}
+  y_{m-i-1} = [1, q_1, q_2, \ldots, q_{i+1}]
+\end{align}
+
+\colsni{dove adesso $q_m, q_{m-1}, q_{m-2}, \ldots, q_{m-r+1}$
+  rappresentano quei quozienti prima denotati con
+  $q_{r+1}, q_r, q_{r-1}, q_2$; mentre
+  $q_{m-r}, q_{m-r-1}, \ldots, q_1$ rappresentano quei quozienti che
+  prima si erano chiamati rispettivamente $t_1, t_2, \ldots,
+  t_{s+1}$. ---La soluzione iniziale $(x_0,y_0)$ dell'equazione
+  $\sum_{h=0}^n C_h x^{n-h}\cdot y^h=P$ (supposta esistente) è adesso
+  rappresentata dalla coppia $(x_{m-r}, y_{r+1})$.
+
+  Ciò posto, formiamo lo specchio:}
+%
+{}
+
+\[\begin{array}{r@{\;}l l l l l l}
+    &x_0 & x_1 & x_2 & \cdots & x_m = 1 & x_{m+1} = 1\\
+    1=&y_{m+1} & y_m=1 & y_{m-1} & \cdots & y_1 & y_0.
+  \end{array}\]
+
+\cols{Dico che due termini appartenenti alla stessa colonna soddisfano
+  alla congruenza}
+%
+{}
+
+\begin{align*}
+  \sum_{h=0}^n (-1)^{hi} C_h x_i^{n-h}\cdot y_{m-i+1}^h \equiv\footnote{\(\equiv 0\)?} \mod P.
+  &&(i=0,1,2,\ldots,m)
+\end{align*}
+
+\cols{Sia $H$ la radice della congruenza}{}
+
+\[y_{r+1} \equiv x_{m-r}\cdot x \mod P\]
+
+\colsni{sempre solubile, nell'ipotesi che $x_{m-r},y_{r+1}$ siano
+  primi fra loro e con $P$.--- Avremo:}
+
+\begin{equation}
+  \tag{\(a\)}\label{a}
+  y_{r+1} \equiv H x_{m-r} \mod P.
+\end{equation}
+
+\cols{Ora dico che sussiste la congruenza}{}
+
+\begin{align}
+  \tag{\(b\)}\label{b}
+  y_{i+1} - (-1)^{r-i}\cdot H x_{m-i} \equiv 0 \mod P.
+  &&(i=0,1,2,\ldots,m)
+\end{align}
+
+\cols{Intanto, come mostra la~\eqref{a}, la~\eqref{b} è vera per
+  $i=r$. Facciamo ora vedere che la stessa congruenza sussiste anche
+  per $i=r-1$ e per $i=r+1$. --Ricordiamo che $x_m,y_{r+1}$ sono quei
+  numeri che prima avevamo chiamato $x_0,y_0$;}
+%
 {}
 
 \end{document}
