@@ -888,9 +888,63 @@
 \cols{Intanto, come mostra la~\eqref{a}, la~\eqref{b} è vera per
   $i=r$. Facciamo ora vedere che la stessa congruenza sussiste anche
   per $i=r-1$ e per $i=r+1$. --Ricordiamo che $x_m,y_{r+1}$ sono quei
-  numeri che prima avevamo chiamato $x_0,y_0$;}
+  numeri che prima avevamo chiamato $x_0,y_0$; e che
+  $x_{m-r-1},y_{r+2},x_{m-r+1},y_r$ rappresentano quelle quantità che
+  prima si erano denotate con $x_1', y_1,x_1,y_1'$
+  rispettivamente. ---Talché per ipotesi e per costruzione avremo:}
 %
 {}
+
+\begin{align*}
+  x_{m-r+1} &= C_n y_{r+1}^{n-1} - q_0 x_{m-r}
+              \qquad x_{r+1} = C_0 x_{m-r}^{n-1} - t_0 y_{r+1}\\
+  x_{m-r-1} &= \left[ q_0 t_0 + \sum_{h=1}^{n-1} C_h x_{m-r}^{n-h-1} \cdot y_{r-1}^{h-1} \right]
+              \times x_{m-r} + C_n y_{r+1}^{n-1} - q_0 x_{m-r} =
+              t_0 x_{m-r} + \sum_{h=0}^{n-1} C_h x_{m-r}^{n-h} \cdot y_{r+1}^{h-1}
+\end{align*}
+%
+\begin{equation*}
+  y_r = \left[ q_0 + t_0 + \sum_{h=1}^{n-1} C_h x_{m-r}^{n-h-1} \cdot y_{r+1}^{h-1}\right]
+  \times y_{r+1} + C_0 x_{m-r}^{n-1} - t_0 y_{r+1} =
+  q_0 y_{r+1} + \sum_{h=0}^{n-1} C_h x_{m-r}^{n-h-1}\cdot y_{r+1}^h
+\end{equation*}
+%
+\begin{equation*}
+  \sum_{h=0}^n C_h x_{m-r}^{n-h}\cdot y_{r+1}^h = P.
+\end{equation*}
+
+\cols{Avremo perciò}{}
+
+\begin{equation*}
+  y_r + H x_{m-r+1} = q_0 y_{r+1} + \frac{P - C_n y_{r+1}^n}{x_{m-r}}
+  + H (C_n y_{r+1}^{n-1} - q_0 y_{m-r})
+\end{equation*}
+%
+\begin{multline*}
+  (y_r + H x_{m-r+1}) x_{m-r} = q_0 y_{r+1} x_{m-r} + P - C_n y_{r+1}^n
+  + H x_{m-r} (C_n y_{r+1}^{n-1} - q_0 x_{m-r}) \equiv\\
+  \equiv q_0 x_{m-r} (y_{r+1} - H x_{m-r}) - C_n y_{r+1}^{n-1}(y_{r+1} - H x_{m-r}) \equiv
+  (q_0 x_{m-r} - C_n y_{r+1}^{n-1}) \times (y_{r+1} - H x_{m-r}) \equiv 0 \mod P
+\end{multline*}
+
+\colsni{ed essendo $x_{m-r}$ primo con $P$, se ne deduce}
+%
+{}
+
+\[y_r + H x_{m-r+1} \equiv 0 \mod P.\]
+
+\cols{Similmente}{Similarly}
+
+\begin{equation*}
+  y_{r+2} + H x_{m-r-1} = t_0 (y_{r+1} - H x_{m-r}) + C_0 x_{m-r}^{n-1}
+  + H \frac{P - C_0 x_{m-r}^n}{y_{r+1}} \equiv
+  C_0 x_{m-r}^{n-1} + H\frac{P - C_0 x_{m-r}^n}{y_{r+1}} \mod P
+\end{equation*}
+%
+\begin{equation*}
+  (y_{r+2} + H x_{m-r-1}) y_{r+1} \equiv C_0 x_{m-r}^{n-1} y_{r+1} - C_0 x_{m-r}^n \cdot H
+  \equiv C_0 x_{m-r}^{n-1}(y_{r+1} - H x_{m-r}) \equiv 0 \mod P
+\end{equation*}
 
 \end{document}
 
