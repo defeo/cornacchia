@@ -861,7 +861,7 @@
 {}
 
 \begin{align*}
-  \sum_{h=0}^n (-1)^{hi} C_h x_i^{n-h}\cdot y_{m-i+1}^h \equiv\footnote{\(\equiv 0\)?} \mod P.
+  \sum_{h=0}^n {(-1)}^{hi} C_h x_i^{n-h}\cdot y_{m-i+1}^h \equiv\footnote{\(\equiv 0\)?} \mod P.
   &&(i=0,1,2,\ldots,m)
 \end{align*}
 
@@ -881,7 +881,7 @@
 
 \begin{align}
   \tag{\(b\)}\label{b}
-  y_{i+1} - (-1)^{r-i}\cdot H x_{m-i} \equiv 0 \mod P.
+  y_{i+1} - {(-1)}^{r-i}\cdot H x_{m-i} \equiv 0 \mod P.
   &&(i=0,1,2,\ldots,m)
 \end{align}
 
@@ -945,6 +945,66 @@
   (y_{r+2} + H x_{m-r-1}) y_{r+1} \equiv C_0 x_{m-r}^{n-1} y_{r+1} - C_0 x_{m-r}^n \cdot H
   \equiv C_0 x_{m-r}^{n-1}(y_{r+1} - H x_{m-r}) \equiv 0 \mod P
 \end{equation*}
+
+\colsni{ed essendo $y_{r+1}$ primo con $P$}{}
+
+\[y_{r+2} + H x_{m-r-1} \equiv 0 \mod P.\]
+
+\cols{Dunque intanto la congruenza}{}
+
+\begin{equation}
+  \tag{\ref{b}}
+  y_{i+1} - {(-1)}^{r-1} \cdot H \cdot x_{m-i} \equiv 0 \mod P.
+\end{equation}
+
+\colsni{è vera per $i=r,r-1,r+1$.
+
+  Ora supponiamo che la~\eqref{b} sia vera fino all'indice
+  $r\pm \lambda$; si vuol provare che essa vale anche per l'indice
+  $r\pm (\lambda+1)$. ---Si ha}
+%
+{}
+
+\begin{align*}
+  x_{m-(r+\lambda+1)} &= q_{m-(r+\lambda+1)} \times x_{m-(r+\lambda)} + x_{m-(r+\lambda-1)}\\
+  y_{r+1+(\lambda+1)} &= y_{r+1+(\lambda-1)} - q_{m-(r+\lambda)} \cdot y_{r+\lambda+1}\\
+  x_{m-(r-(\lambda+1))} &= x_{m-(r-(\lambda-1))} - q_{m-(r-\lambda)} \cdot x_{m-(r-\lambda)}\\
+  y_{r+1-(\lambda+1)} &= q_{m-(r-\lambda)} \cdot y_{r+1-\lambda} + y_{r+1-(\lambda-1)}.
+\end{align*}
+
+\cols{Da cui si ricava facilmente, mediante sostituzione}
+%
+{}
+
+\begin{gather*}
+  y_{r+1+(\lambda+1)} - {(-1)}^{r-(r+\lambda+1)}\cdot H \cdot x_{m-(r+\lambda+1)} =\\[1em]
+  = \overline{y_{r+1+(\lambda-1)} -{(-1)}^{r-(r+\lambda-1)} \cdot H \cdot x_{m-(r+\lambda-1)}}
+    + q_{m-(r+\lambda)} \overline{(y_{r+1+\lambda} -{(-1)}^{r-(r+\lambda)} \cdot H x_{m-(r+\lambda)})}\\[1.5em]
+  y_{r+1-(\lambda+1)} - {(-1)}^{r-(r-(\lambda+1))}\cdot H x_{m-(r-(\lambda+1))} =\\[1em]
+  = \overline{y_{r+1-(\lambda-1)} -{(-1)}^{r-(r-(\lambda-1))} \cdot H x_{m-(r-(\lambda-1))}}
+    + q_{m-(r-\lambda)} \overline{(y_{r+1-\lambda} -{(-1)}^{r-(r-\lambda)} \cdot H x_{m-(r-\lambda)})}.
+\end{gather*}
+
+\cols{Ed essendo per ipotesi i binomii sopra lineati $\equiv 0 \mod P$, si conclude}
+%
+{}
+
+\[y_{r+1+(\lambda+1)} - {(-1)}^{(\lambda+1)} \cdot H x_{m-(r+\lambda+1)} \equiv
+  y_{r+1-(\lambda+1)} - {(-1)}^{+(\lambda+1)} \cdot H x_{m-(r-(\lambda+1))} \equiv
+  0 \mod P.\]
+
+\cols{Perciò se si ammette che la congruenza}{}
+
+\[y_{r+1+\underline{\lambda}} - {(-1)}^\lambda H \cdot x_{m-(r+\underline{\lambda})} \equiv 0 \mod P\]
+
+\colsni{sia vera per $\lambda = 0,1,2,\ldots,\bar{\lambda}$, essa è
+  vera anche per $\lambda=\bar{\lambda}+1$.
+  
+  Avendo provato ch'essa vale per $\lambda=0,1$, si può affermare
+  ch'essa sussiste per ogni $\lambda$; e quindi anche per la
+  congruenza}
+%
+{}
 
 \end{document}
 
