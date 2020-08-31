@@ -24,7 +24,7 @@
   \end{parcolumns}}
 
 \newcommand{\footnotecols}[2]{\footnotetext{%
-    \begin{minipage}{0.95\linewidth}\cols{#1}{#2}\end{minipage}%
+    \begin{minipage}[t]{0.95\linewidth}\vspace{-1em}\cols{#1}{#2}\end{minipage}%
 }}
 
 \newcommand\secbreak{%
@@ -310,7 +310,7 @@
   $y_1$ della congruenza $x_0y\equiv 1 \mod P$ è $<\frac{1}{2}P$. Dopo
   ciò possiamo enunciare:
 
-  \guillemotleft Dato un intero qualunque $P$ e un numero
+  \guillemotleft{} Dato un intero qualunque $P$ e un numero
   $x_0<\frac{1}{2}P$, primo con $P$ e inferiore ad esso, sia $y_0$ la
   radice della congruenza}
 %
@@ -1005,6 +1005,333 @@
   congruenza}
 %
 {}
+
+\[y_{i+1} - (-1)^{r-i} \cdot H x_{m-i} \equiv 0 \mod P\]
+
+\colsni{vale per $i=0,1,2,\dots,m$.
+
+Avremo pertanto:}
+{}
+
+\begin{equation*}
+  \sum_{h=0}^n (-1)^{h(r-i)} \cdot C_h x_{m-i}^{n-h} \cdot y_{i+1}^h
+  \equiv \sum_{h=0}^n (-1)^{h(r-i)} \cdot C_h x_{m-i}^{n-h} (-1)^{h(r-i)} \cdot H^h \cdot x_{m-i}^h
+  \equiv x_{m-i}^n \sum_{h=0}^n C_h H^h \mod P.
+\end{equation*}
+
+\cols{Ma per ipotesi:}{}
+
+\begin{equation*}
+  \sum_{h=0}^n C_h x_{m-r}^{n-h} \cdot y_{r+1}^h = P \equiv 0 \mod P
+  \qquad y_{r+1} \equiv H \cdot x_{m-r} \mod P
+\end{equation*}
+
+\colsni{quindi:}{}
+
+\begin{equation*}
+  \sum C_h x_{m-r}^{n-h} \cdot y_{r+1}^h \equiv
+  \sum C_h x_{m-r}^{n-h} \cdot H^h \cdot x_{m-r}^h \equiv
+  x_{m-r}^n \cdot \sum C_h H^h \equiv 
+  0 \mod P
+\end{equation*}
+
+\colsni{ed essendo $x_{m-r}^n$ primo con $P$}{}
+
+\[\sum C_h H^h \equiv 0 \mod P.\]
+
+\cols{Laonde anche}{}
+
+\begin{align*}
+  \sum_{h=0}^n (-1)^{h(r-i)} \cdot C_h x_{m-i}^{n-h} \cdot y_{i+1}^
+  \equiv 0 \mod P. 
+  &&(i=0,1,2,\dots,m)
+\end{align*}
+
+\cols{In particolare per $i=0$ e per $i=m-1$ si hanno le due congruenze:}{}
+
+\begin{align*}
+  &\sum_{h=0}^n (-1)^{hr} C_h y_1^h \equiv 0 \mod P\\
+  &\sum_{h=0}^n (-1)^{h(r-m+1)} \cdot C_h x_1^{n-h} \equiv 0 \mod P
+\end{align*}
+
+\colsni{cioè $(x_1),(y_1)$ sono rispettivamente radici delle congruenze}{}
+
+\[\sum_{h=0}^n C_h x^{n-h} \equiv 0 \qquad \sum_{h=0}^n C_h y^h \equiv 0 \mod P.\]
+
+\cols{Per un teorema precedente si ha poi}{}
+
+\[x_1 y_1 \equiv \pm 1 \mod P\]
+
+\colsni{e inoltre
+
+  \begin{align*}
+    x_{m-i} \cdot y_i + x_{m-i+1} \cdot y_{i+1} = \text{constante.}\\
+    (\text{per } i=0,1,2,\dots,m)
+  \end{align*}
+
+  Ma per $i=r,r+1$ si ha
+}{}
+
+\begin{equation*}
+  x_{m-r} \cdot y_r + x_{m-r+1} \cdot y_{r+1} =
+  y_{r+1} \Bigl( C_n y_{r+1}^{n-1} - q_0 x_{m-r} \Bigr) +
+  x_{m-r} \cdot \Bigl(q_0 y_{r+1} + \sum_{h=0}^{n-1} C_h x_{m-r}^{n-h-1} \cdot y_{r+1}^h \Bigr) =
+  \sum_{h=0}^n C_h x_{m-r}^{n-h} \cdot y_{r+1} = P
+\end{equation*}
+
+\begin{equation*}
+  y_{m-r-1}\cdot y_{r+1} + x_{m-r} \cdot y_{r+2} =
+  y_{r+1} \Bigl(t_0 x_{m-r} + \sum_{h=1}^n C_h x_{m-r}^{n-h} \cdot y_{r+1}^{h-1} \Bigr) + x_{m-r} \Bigl( C_0 x_{m-r}^{n-1} - t_0 y_{r+1} \Bigr) =
+  \sum_{h=0}^n C_h x_{m-r}^{n-h} \cdot y_{r+1}^h = P.
+\end{equation*}
+
+\cols{Perciò, per ogni $i$ è}{}
+
+\[x_{m-i} \cdot y_i + x_{m-i+1} \cdot y_{i+1} = P.\]
+
+\cols{In particolare per $i=0,m$ si ha}{}
+
+\[x_0 + x_1 = y_0 + y_1 = P.\]
+
+\cols{---Riprendendo le relazioni:}{}
+
+\begin{align}
+  \tag{\ref{alpha}}
+  \left\{\begin{array}{l}
+           x_{i-1} - q_i x_i = x_{i+1} \\
+           x_{m-i} - q_i y_{m-i+1} = y_{m-i+2} 
+         \end{array}\right.
+  &&(i=1,2,\dots,m)
+\end{align}
+
+\colsni{si scorge come le quantità $q_i$, eccetto la $q_{m-r}$,
+  rappresentano rispettivamente le due serie dei quozienti nei due
+  sistemi di divisioni $(x_{m-r},x_{m-r+1}),(y_{r+1},y_{r+2})$, sono
+  tutte positive. Che se anche $q_{m-r}$ fosse positiva, allora le
+  relazioni \eqref{alpha} insieme con le $x_0+x_1=P$, $y_0+y_1=P$ ci
+  dicono come i numeri $x_i$ non sono che i resti che si ottengono
+  applicando alla coppia $(P,x_0)$ l'algoritmo della ricerca del
+  M.C.D.; o come diremo più brevemente, è la successione dei resti nel
+  sistema di divisioni $(P,x_0)$.---Similmente i numeri $y_{m-i}$ sono
+  i resti del sistema di divisioni $(P,y_0)$.---Inoltre dobbiamo
+  ricordare che $(x_0)$ è una radice della congruenza
+  $\sum_{h=0}^n C_h x^{n-h}\equiv 0 \mod P$, e che
+  $x_0 y_0 \equiv \pm 1 \mod P$.
+
+  Prima di trarre le conseguenze delle proprietà stabilite, cerchiamo
+  quinidi la condizione affinchè risulti $q_{m-r}>0$. Poniamo per
+  semplicità $x_{m-r}=a\quad y_{r+1}=b$: si ha}
+% 
+{}
+
+\begin{multline*}
+  q_{m-r} = q_0 + t_0 + \sum_{h=1}^{n-1} C_h a^{n-1-h} \cdot b^{h-1} 
+  = q_0 + t_0 + \frac{P - C_0 a^n - C_n b^n}{ab} 
+  = \frac{1}{ab} (q_0 ab + t_0 ab + P - C_0 a^n - C_n b^n) =\\
+  = \frac{P - a(C_0 a^{n-1} - t_0 b) - b(C_n b^{n-1} - q_0 a)}{ab}
+  = \frac{P - (a y_{r+2} + b x_{m-r+1})}{a \cdot b}.
+\end{multline*}
+
+\cols{Perchè dunque risulti $q_{m-r}>0$ bisognerà che sia}{}
+
+\[P > a y_{r+2} + b x_{m-r+1}.\]
+
+\cols{Siccome poi è $x_{m-r-1} < a$, $y_{r+2} < b$, e quindi}{}
+
+\[a y_{r+2} + b x_{m-r+1} < 2ab\]
+
+\colsni{se fosse}{}
+
+\[P > 2ab\]
+
+\colsni{a maggior ragione risulterebbe}{}
+
+\[P > a y_{r+2} + b x_{m-r+1},\]
+
+\colsni{e quindi $q_{m-r} > 0$,}{}
+
+\cols{Osservando poi che quando $q_{m-r} > 0$ è
+  $y_r = q_{m-r} b + y_{r+2} > b$, dalla relazione}
+% 
+{}
+
+\[y_r \cdot a + x_{m-r+1} \cdot b = P\]
+
+\colsni{si trae $a y_r < P$ e a forziori $ab < P$.
+
+  Affinchè dunque risulti $q_{m-r} > 0$ è necessario che sia $ab<P$, e
+  sufficiente che si abbia $2ab<P$.
+
+  Dopo ciò, richiamando i risultati precedentemente ottenuti possiamo
+  concludere:
+
+  \guillemotleft{} Sia data l'equazione
+  $\sum_{h=0}^n C_h x^{n-h}\cdot y^h = P$, il cui primo membro è una
+  forma omogenea di grado $n$ nelle indeterminate $x$ e $y$, con
+  coefficienti interi, il primo e l'ultimo positivi (non
+  nulli). Consideriamo una radice $x_0 > \frac{P}{2}$ della congruenza
+  $\sum_{h=0}^n C_h x^{n-h} \equiv 0 \mod P$ e la sua coniugata
+  $y_0 > \frac{P}{2}$, tale cioè che $x_0 y_0 \equiv \pm 1 \mod P$, la
+  quale soddisferà perciò alla congruenza
+  $\sum_{h=0}^n C_h y^h \equiv 0 \mod P$.
+
+  Applichiamo alle coppie $(P,x_0)$, $(P,y_0)$ l'algoritmo della
+  ricerca del M.C.D.; si perverrà in entrambi i casi al resto $1$,
+  dopo uno stesso numero $m$ di divisioni. ---Siano
+  $x_1,x_2,\ldots,x_m=1$; $y_1,y_2,\ldots,y_m=1$ i resti nel sistema
+  di divisioni $(P,x_0)$ e rispett. $(P,y_0)$.--- Formando lo specchio
+}
+% 
+{}
+
+\begin{equation}
+  \tag{S}\label{S}
+  \left\{
+    \begin{array}{rlllll}
+      x_1 & x_2 & x_3 & \cdots & x_{m-1} & x_m = 1  \\
+      1 = y_m & y_{m-1} & y_{m-2} & \cdots & y_2 & y_1 
+    \end{array}
+  \right.
+\end{equation}
+
+\colsni{due termini qualunque appartenenti alla stessa colonna,
+  soddisfano alla congruenza}
+% 
+{}
+
+\[\sum (-1)^{h \lambda} \cdot C_h x_\lambda^{n-h} \cdot y_{m-\lambda+1}^h \equiv 0 \mod P.\]
+
+\cols{Inoltre, se l'equazione}{}
+
+\[\sum C_h x^{n-h} \cdot y^h = P\]
+
+\colsni{ammette una soluzione propria $(a,b)$ tale che $2ab<P$, essa
+  soluzione si troverà certamente in una delle colonne dello
+  specchio~\eqref{S}, o di un altro analogo ottenuto da un'altra
+  radice della congruenza}
+% 
+{}
+
+\[\sum C_h x^{n-h} \equiv 0 \mod P.\]
+
+\cols{Adunque, applicando a tutte le radici di questa congruenza lo
+  stesso processo applicato alla radice $x_0$, si troveranno
+  certamente, tra le corrispondenti successioni dei resi, tutte le
+  soluzioni, se esistono, dell'equaz.
+  $\sum C_h x^{n-h} \cdot y^h\equiv P$, per le quali risulta
+  $2(xy)<P$. ---Infatti, se con questo metodo non si ottenesse una
+  certa soluzione $(a,b)$ soddisfacente alla condizione $2ab<P$,
+  partendo da questa soluzione e operando come dianzi, si arriverebbe
+  a trovare una radice $x_0$ della cong.
+  $\sum C_h x^{n-h} \equiv 0 \mod P$ con $x_0>\frac{P}{2}$; e allora,
+  se $y_0>\frac{P}{2}$ è la coniugata di $x_0$ (tale cioè che
+  $x_0 y_0 \equiv \pm 1 \mod P$) applicando l'algoritmo della ricerca
+  del M.C.D. alle coppie $(P,x_0)$, $(P,y_0)$ ritroveremo
+  necessariamente tra i resti dei due sistemi di divisioni la
+  soluzione $(a,b)$ che per falsa ipotesi abbiamo supposto non
+  ottenuta.
+
+  Il metodo esposto delle divisioni successive dà dunque tutte le
+  soluzioni proprie dell'eq. $\sum_{h=0}^n C_h x^{n-h} \cdot y^h = P$
+  soddisfacenti alla condizione $2|xy|<P$, note che siano le radici
+  della congruenza $\sum_{h=0}^n C_h x^{n-h} \equiv 0 \mod P$.
+
+  Se $x_0>\frac{P}{2}$ è una di tali radici, ed $y_0>\frac{P}{2}$ il
+  numero $<P$ tale che $x_0 y_0 \equiv \pm 1 \mod P$, applicando alle
+  coppie $(P,x_0)$, $(P,y_0)$ l'algoritmo della ricerca del
+  M.C.D.\footnotemark, e formando coi resti lo specchio
+  precedente~\eqref{S}, due termini qualunque
+  $x_\lambda, y_{m-\lambda+1}$ appartenenti alla stessa colonna
+  soddisfano alla congruenza}
+% 
+{}
+
+\footnotecols{Notiamo una volta per sempre che basta eseguire il
+  sistema di divisioni $(P,x_0)$ poichè l'altro risulta determinato
+  dallo stesso processo che conduce a trovare il numero $y_0$; e
+  precisamente, se $q_0=1,q_1,q_2,\ldots,q_{m-1}$ sono i quozienti del
+  sistema $(P,x_0)$, e si pone $q_m=x_{m-1}-1$, si ha:
+
+  \[y_i = [1,q_1,q_2,\ldots,q_{m-i}]\qquad;\qquad 
+    y_0 = [1,q_1,q_2,\ldots,q_{m-1},q_m].\]}
+% 
+{}
+
+\[\sum_{h=0}^n (-1)^{h\lambda} C_h x_\lambda^{n-h} \cdot y_{m-\lambda+1}^h \equiv 0 \mod P\]
+
+\colsni{per cui si può scrivere:}{}
+
+\[\sum (-1)^{h\lambda} C_h \cdot x_\lambda^{n-h} \cdot y_{m-\lambda+1}^h = k_\lambda \cdot P\]
+
+\colsni{con $k_\lambda$ intero (positivo o negativo).
+
+  Se alla radice considerata $x_0$ corrisponde una soluzione propria
+  $(a,b)$ dell'equazione}
+% 
+{}
+
+\begin{equation}
+  \tag{A}\label{A}
+  \sum_{h=0}^n C_h x^{n-h} \cdot y^h = P
+\end{equation}
+
+\colsni{soddisfacente alla condizione $2ab<P$, essa, come abbiam
+  visto, deve necessariamente trovarsi in una delle colonne dello
+  specchio precedente~\eqref{S}; cioè uno dei $k_\lambda$ dev'essere
+  uguale ad $1$. ---Per accertare dunque l'esistenza di questa
+  soluzione, bisognerebbe calcolare, per ogni coppia
+  $(x_\lambda, y_{m-\lambda+1})$ dello specchio il corrispondente
+  $k_\lambda$. Ma questa verifica non è in generale semplice, se il
+  numero $m$ delle divisioni $(P,x_0)$ è grande, e se il grado e il
+  numero dei termini della forma $\sum C_h x^{n-h}\cdot y^h$ è
+  abbastanza elevato.--- Di qui la necessità di dare dei criterii che
+  permettano di semplificare questa verifica.
+
+  Osserviamo anzitutto che data una radice $x_u$ della congruenza}
+% 
+{}
+
+\[\sum (-1)^{h\lambda} C_h x^{n-h} \equiv 0 \mod P,\]
+
+\colsni{si possono trovare tutte le soluzioni della
+  $\sum C_h x^{n-h} \cdot y^h \equiv 0 \mod P$ \emph{appartenenti}
+  alla radice $x_u$.
+
+  Preso in fatti un $\bar{y}$ qualunque inferiore a $P$, e ponendo
+  $x_u \bar{y} = \bar{x} \mod P$, si trova facilmente}
+% 
+{}
+
+\[\sum C_h \bar{x}^{n-h} \cdot \bar{y}^h \equiv 0 \mod P.\]
+
+\cols{Si tratta ora di vedere quali siano quelle di queste soluzioni
+  che si ottengono col metodo delle divisioni successive. ---Anche qui
+  partiremo da una di tali soluzioni, e mostreremo come se ne possa
+  dedurre una radice della congruenza}
+% 
+{}
+
+\[\sum C_h x^{n-h} \equiv 0 \mod P.\]
+
+\cols{Sia dunque $(x_0,y_0)$ una soluzione della congruenza
+  $\sum C_h x^{n-h} \cdot y^h \equiv 0 \mod P$ cioè sia}
+% 
+{}
+
+\[\sum C_h x_0^{n-h}\cdot y_0^h = k_0 P\]
+
+\colsni{($k_0$ \text{intero}).
+
+  Sulla forma omogenea del \ordinalnum{1} membro manterremo le stesse
+  ipotesi già fatte, cioè supponiamo $C_0$ e $C_n$ positivi e non
+  nulli; $x_0$ primo con $C_n y_0$; $y_0$ primo con $C_0 x_0$; qui
+  aggiungeremo la condizione che sia $k_0$ primo con $x_0 y_0$. Si
+  divida $C_n y_0^{n-i}$ per $x_0$, e sia $q_0$ il quoziente,
+  $x_\lambda$ il resto, talchè}
+% 
+{}
+
+\[C_n y_0^{n-i} - q_0 x_0 = x_\lambda.\]
 
 \end{document}
 
