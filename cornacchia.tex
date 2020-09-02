@@ -1798,7 +1798,479 @@ Avremo pertanto:}
   divisioni successive alla risoluzione dell'equazione indeterminata
   di \ordinalnum{2} grado.}
 
+\cols{Ora vogliamo applicare i risultati ottenuti alla risoluzione
+  dell'equazione indeterminata di \ordinalnum{2} grado, ridotta alla
+  forma $x^2 \pm qy^2=P$. Condizione necessaria di risolubilità è
+  naturalmente l'essere $-q$ residuo quadratico di $P$. Questa
+  condizione si supporrà d'ora in avanti sempre soddisfatta, senza
+  enunciarlo esplicitamente. Daremo in altra nota delle condizioni
+  sufficienti, tra cui
 
+  \begin{enumerate}
+  \item $q>0$. --- Se l'equazione $x^2 + q y^2 = p$ è solubile pel più
+    piccolo numero primo che dà per residuo $-q$, essa è solubile per
+    ogni altro numero primo di cui $-q$ sia resid.\ quad.
+  \item $q<0$. --- Se l'equazione $x^2 + q y^2 = p$ è solubile per
+    tutti i numeri primi inferiori a $|q$, di cui $-q$ è residuo
+    quadrat., essa è solubile per ogni altro numero primo di cui $-q$
+    sia r.\ q.
+  \item $q>0$ è della forma $4k+1$. --- Se le equaz.\
+    $x^2 + q y^2 = 2 p_\lambda$ $x^2 + q y^2 = p_\mu$ sono solubili,
+    la \ordinalnum{1}[f] pel più piccolo numero primo della forma
+    $4\lambda - 1$ che dà per residuo quad. $-1$, la \ordinalnum{2}[f]
+    pel più piccolo numero primo della forma $4\mu+1$ che dà per
+    residuo $-q$, e stesse equazioni sono solubili per ogni altro
+    numero prima della forma $4\lambda - 1$ e rispett. $4\mu + 1$, di
+    cui $-q$ sia resid.\ quadratico.
+  \item Se le equazioni $x^2 - q y^2 = 2p_\lambda$
+    $x^2 - q y^2 = p_\mu$ dove $q>0$ è della forma $4h-1$, sono
+    solubili per tutti i numeri primi della forma $4\lambda-1$ e
+    rispett.\ $4\mu+1$ inferiori a $q$, di cui $q$ sia resid. quad., le
+    stesse equazioni sono solubili per ogni altro numero primo della
+    forma $4\lambda - 1$ e rispett.\ $4\mu + 1$, di cui $+q$ è resid.\
+    quad.
+  \end{enumerate}
+
+  \paragraph{Risoluzione dell'equazione $x^2 + q y^2 = m$.} Veniamo
+  ora ad applicare quanto si è detto sull'equazione
+  $\sum_{h=0}^n C_h x^{n-h} \cdot y^h = P$, alla risoluzione
+  dell'equaz.\ quadratica
+}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{quadeq}
+  x^2 + q y^2 = m.
+\end{equation}
+
+\cols{Distinguiamo due casi:
+  
+  1. $q>0$. --- Se esiste una soluzione intera $(a,b)$
+  della~\eqref{quadeq}, sarà
+}
+%
+{}
+
+\[a^2 + q b^2 = m \ge a^2 + b^2 > 2ab\]
+
+\colsni{quindi certamente}{}
+
+\[2ab < m.\]
+
+\cols{Il metodo delle divisioni successive dà dunque tutte le
+  soluzioni proprie, se esistono dell'eq.~\eqref{quadeq}.
+
+  Se $x_0 > \frac{m}{2}$ è una radice della congruenza}
+%
+{}
+
+\begin{equation}
+  \tag{2}\label{quadeqmod}
+  x^2 + q \equiv 0 \mod m
+\end{equation}
+
+\colsni{e $x_1, x_2, x_3, \ldots, x_r=1$ la successione dei resti,
+  $q_0=1, q_1, q_2, \ldots, q_{r-1}$ quella dei quozienti del sistema
+  di divisioni $(m,x_0)$, fatto $q_r = x_{r-1}-1$, si ponga}
+%
+{}
+
+\begin{equation*}
+  y_r=1\quad y_{r-1} = |1,q_1|\quad y_{r-2} = |1,q_1,q_2|,\quad \ldots,\quad
+  y_1 = |1,q_1,q_2,\ldots,q_{r-1}|,\quad
+  y_0 = |1,q_1,q_2,\ldots,q_{r-1},q_r|.
+\end{equation*}
+
+\cols{Come sappiamo, è allora $x_0 y_0\equiv \pm 1 \mod m$, ed
+  $y_1, y_2, \ldots, y_r=1$ i resti nel sistema di divisioni
+  $(m,y_0)$.
+
+  Si formi lo specchio
+}
+
+\begin{equation}
+  \tag{S}\label{S}
+  \left\{
+    \begin{array}{rllllllll}
+      x_1 & x_2 & \cdots & x_{u-1} & x_u & x_{u+1} & \cdots &  x_{r-1} & x_r = 1  \\
+      1 = y_r & y_{r-1} & \cdots & y_{r-u+2} & y_{r-u+1} & y_{r-u} & \cdots & y_2 & y_1 
+    \end{array}
+  \right.
+\end{equation}
+
+\colsni{nel quale i resti della \ordinalnum{1}[f] linea sono ordinati
+  in ordine decrescente, quelli della \ordinalnum{2}[f] in ordine
+  crescente. --- Alla radice considerata $x_0$ corrisponda una
+  soluzione (propria) dell'equazione~\eqref{quadeq}, e sia essa la
+  $(x_u,y_{r-u+1})$. Si ha qui}
+%
+{}
+
+\[y_{r-u+2} = x_u - t_0 y_{r-u+1}\qquad
+  x_{u+1} = q y_{r-u+1} - q_0 x_u\]
+
+\colsni{dove $q_0, t_0$ sono interi positivi o nulli. --- Allora}{}
+
+\begin{align*}
+  x_{u+1} ( x_u + y_{r-u+1}) &= (q y_{r-u+1} - q_0x_u) ( x_u + y_{r-u+1}) =\\
+                             &= q y_{r-u+1}^2 + q x_u y_{r-u+1} - q_0 x_u^2 - q_0 x_u y_{r-u+1} =\\
+                             &= m - x_u^2 + q x_u y_{r-u+1} - q_0 x_u^2 - q_0 x_u y_{r-u+1} =\\
+                             &= m - x_u (x_u + q_0 x_u + q_0 y_{r-u+1} - q y_{r-u+1}) =\\
+                             &= m - x_u (x_u + q_0 y_{r-u+1} - x_{u+1}) < m
+\end{align*}
+
+\cols{Similmente}{}
+
+\begin{multline*}
+  y_{r-u+2} (x_u + y_{r-u+1})
+  = (x_u - t_0 y_{r-u+1}) (x_u + y_{r-u+1})
+  = m - q y_{r-u+1}^2 - t_0 x_u y_{r-u+1} - t_0 y_{r-u+1}^2 + x_u y_{r-u+1} =\\
+  = m - y_{r-u+1} (q y_{r-u+1} + t_0 x_u - y_{r-u+2}) < m
+\end{multline*}
+
+\cols{Concludiamo:}
+
+\[x_{u+1} (x_u + y_{r-u+1}) < m\qquad y_{r-u+2} (x_u + y_{r-u+1}) < m\]
+
+\cols{applicando perciò un risultato precedentemente ottenuto, avremo
+  che $x_u$ è il primo termine della \ordinalnum{1}[f] linea dello
+  specchio precedente~\eqref{S} che supera il corrispondente
+  $y_{r-u+1}$ della \ordinalnum{2}[f], (procendendo da destra a
+  sinistra, quando sia $x_u>y_{r-u+1}$: mentre, se $y_{r-u+1}>x_u$,
+  sarà $y_{r-u+1}$ il primo termine della \ordinalnum{2}[f] linea
+  di~\eqref{S} che supera il corrispondente $x_u$ della
+  \ordinalnum{1}[f], procedendo da sinistra a destra. --- Per mezzo
+  dello specchio~\eqref{S} si può dunque trovar subito, se esiste, la
+  soluzione $(x_u,y_{r-u+1})$ dell'equaz.\ $x^2+q y^2 = m$
+  corrispondentemente a una data radice $x_0$ della congr.}
+%
+{}
+
+\[x^2 + q = 0 \mod m.\]
+
+\cols{In particolare, se $q=1$, le $x$ coincidono con le $y$, e si
+  ritrova ciò che si era già dimostrato, che cioè la soluzione
+  dell'eq.\ $x_2 + y^2 = m$, corrispondente alla radice $x_0$ della
+  cong. $x^2+1\equiv 0 \mod m$, è data dalla coppia dei resti
+  intermedii nel sistema di divisioni $(m,x_0)$.
+
+  \emph{Es.} Sia l'equazione $x^2 + y^2 = 89$. La radice
+  $>\frac{89}{2}$ della cong.\ $x^2+1=0\mod 89$ è $55$. Sviluppiamo il
+  sistema di divisioni $(89,55)$
+}
+%
+{}
+
+\[\frac{89}{34}^\frac{|55}{1}\quad
+  \frac{55}{21}^\frac{|34}{1}\quad
+  \frac{34}{13}^\frac{|21}{1}\quad
+  \frac{21}{8}^\frac{|13}{1}\quad
+  \frac{13}{5}^\frac{|8}{1}\quad
+  \frac{8}{3}^\frac{|5}{1}\quad
+  \frac{5}{2}^\frac{|3}{1}\quad
+  \frac{3}{1}^\frac{|2}{1}\]
+   
+\colsni{i resti intermedii sono $8$ e $5$, e si ha appunto}{}
+
+\[8^2 + 5^2 = 89.\]
+
+\cols{Sia l'equazione $x^2 + 13 y^2 = 3221$: la radice della
+  congruenza $x^2+13=0\mod 3221$ è $x_0=2723$. Il sistema di divisioni
+  $(3221,2723)$ è}
+%
+{}
+
+\[\frac{3221}{498}^\frac{|2723}{1}\quad
+  \frac{2723}{233}^\frac{|498}{5}\quad
+  \frac{498}{32}^\frac{|233}{2}\quad
+  \frac{233}{9}^\frac{|32}{7}\quad
+  \frac{32}{5}^\frac{|9}{3}\quad
+  \frac{9}{4}^\frac{|5}{1}\quad
+  \frac{5}{1}^\frac{|4}{1}.\]
+
+\cols{Formando successivamente i numeri}{}
+
+\begin{gather*}
+  1,\; [1,5] = 6,\; [1,5,2] = 13,\; [1,5,2,7] = 97,\; [1,5,2,7,3]=301,\\
+  [1,5,2,7,3,1]=401,\; [1,5,2,7,3,1,1]=705,
+\end{gather*}
+
+\colsni{e con questi lo specchio}{}
+
+\[
+  \begin{array}{ccccccc}
+    498 & 233 & 32 & 9 & 5 & 4 & 1\\
+    1 & 6 & 13 & 97 & 304 & 401 & 705
+  \end{array}\]
+
+\colsni{vediamo che il primo resto della \ordinalnum{2}[f] linea che
+  supera il corrispondente della \ordinalnum{1}[f], è $97$: perciò la
+  soluzione cercata sarà $(9,97)$, oppure $(32,13)$. --- Si trova che
+  è appunto}
+%
+{}
+
+\[32^2 + 13 \cdot 13^2 = 3221.\]
+
+\cols{Facciamo un'ultima osservazione sulla risoluzione dell'equazione
+  $x^2 + q y^2=m (q>0)$. --- Essendo sempre $x_0 > \frac{m}{2}$ una
+  radice della congruenza $x^2+q\equiv 0 \mod m$, ed
+  $y_0 > \frac{m}{2}$ il numero $<m$ tale che
+  $x_0 y_0 \equiv \pm 1 \mod m$, siano $x_1,x_2,\ldots,x_n=1$;
+  $y_1,y_2,\ldots,y_n=1$ le due successioni dei resti nei sistemi di
+  divisioni $(m,x_0)$, $(m,y_0)$ (naturalmente abbiamo supposto $x_0$
+  e quindi $y_0$ primo con $m$). --- Disponiamo le due successioni una
+  sotto l'altra a questo modo:}
+%
+{}
+
+\begin{equation}
+  \tag{\ref{S}}
+  \left\{
+    \begin{array}{rllllll}
+      x_1& x_2 & \cdots & x_r & x_{r+1} & \cdots& x_n = 1\\
+      y_n = 1 & y_{n-1} & \cdots & y_{n-r+1} & y_{n-r} & \cdots & y_1
+    \end{array}
+  \right.
+\end{equation}
+
+\colsni{se $y_{n-r+1}$ è il primo termine della \ordinalnum{2}[f]
+  linea che supera il corrispondente $x_r$ della \ordinalnum{1}[f], e
+  se alla radice considerata $x_0$ corrisponde una soluzione propria
+  all'equaz.\ $x^2+q y^2 = m$, essa sarà data da $(x_r,y_{n-r_1})$,
+  ovvero da $(x_{r-1},y_{n-r+2})$. --- Ora qui dimostreremo che si può
+  fare a meno della \ordinalnum{2}[f] successione
+  $y_1,y_2,\ldots,y_n$; e persino \emph{[illegible]}
+
+  Sia infatti $(x_\lambda,y_{n-\lambda+1})$ la soluzione (supposta
+  esistente) dell'eq.\ $x^2+qy^2=m$ corrispondente alla radice
+  considerata $x_0$ della congruenza $x^2+q\equiv 0 \mod m$. --- Si ha
+  intanto}
+
+\[x_\lambda^2 + qy_{n-\lambda+1}^2 = m\]
+
+\colsni{e quindi}{}
+
+\[x_\lambda^2<m.\]
+
+\cols{Ora dimostreremo che}{}
+
+\[x_{\lambda-1}^2 > m.\]
+
+\cols{Si ha infatti}{}
+
+\[x_{\lambda-1} = t_0 x_\lambda + q y_{n-\lambda+1}\]
+
+\colsni{dove $t_0$ è il quoziente della divisione di $x_\lambda$ per
+  $y_{n-\lambda+1}$.
+
+  Se $t_0 = 0$, si ha}
+
+\[x_{\lambda-1} = q y_{n-\lambda+1}\qquad
+  x_{\lambda-1}^2 = q(q y_{n-\lambda+1}^2)\]
+
+\colsni{e quindi, essendo in tal caso $y_{n-\lambda+1}>x_\lambda$, si
+  ha certamente (almeno per $q>1$)}
+%
+{}
+
+\[x_{\lambda-1}^2 = q (q y_{n-\lambda+1}^2) > x_\lambda^2 + q y_{n-\lambda+1}^2 = m.\]
+
+\cols{Se invece $t_0$ è diverso da zero, allora dall'espressione di
+  $x_{\lambda-1}$, essendo $x_\lambda$, $y_{n-\lambda+1}$, $q$, $t_0$
+  quantità positive, risulta evidentemente}
+%
+{}
+
+\[x_{\lambda-1}^2 > m.\]
+
+\cols{Dunque effettivamente $x_\lambda$ è il \ordinalnum{1} resto nel
+  sistema di divisioni $(m,x_0)$, il cui quadrato non super $m$. ---
+  Concludiamo:
+
+  \guillemotleft{} Se alla radice considerata $x_0$ della cong.\
+  $x^2+q\equiv 0 \mod m$ corrisponde una soluzione propria
+  $(x_\lambda,y_{n-\lambda+1})$ dell'equazione $x^2+qy^2=m$, il primo
+  termine $x_\lambda$ di essa è dato dal \ordinalnum{1} resto, nel
+  sistema di divisioni $(m,x_0)$ il cui quadrato non supera $m$. ---
+  Se pertanto questo primo resto $x_\lambda$ è tale che
+  $m-x_\lambda^2$ non sia divisibile per $q$, o se anche, essendo
+  divisibile per $q$, non risulta $\frac{m-x_\lambda^2}{q}$ un
+  quadrato perfetto, si è certi che alla radice $x_0$ non corrisponde
+  alcuna soluzione (propria) dell'eq.\ $x^2+qy^2=m$ \guillemotright{}.
+
+  \emph{Es.} 1. Sia l'equazione $x^2+89y^2=1171$: la radice della
+  cong.\ $x^2+89\equiv 0 \mod 1171$ è $x_0=752$. Il sistema di
+  divisioni $(1171,752)$ è}
+%
+{}
+
+\[\frac{1171}{419}^\frac{|752}{1}\quad
+  \frac{752}{333}^\frac{|419}{1}\quad
+  \frac{419}{86}^\frac{|333}{1}\quad
+  \frac{333}{75}^\frac{|86}{3}\quad
+  \frac{86}{11}^\frac{|75}{1}\quad
+  \cdots\]
+
+\cols{Il \ordinalnum{1} resto, il cui quadrato non supera $1171$ è
+  $11$. Ora $1171-11^2=1050$ che non è divisibile per $89$: tanto
+  basta per affermare che alla radice considerata $x_0=752$ non
+  corrisponde nessuna soluzione dell'equaz.\ $x^2+89y^2=1171$.
+
+  2. Sia l'equazione $x^2+29y^2=2489$: una radice della congruenza
+  $x^2+29\equiv 0\mod 2489$ è $x_0=1878$. --- Il sistema di divisioni
+  $(2489,1878)$ dà:}
+%
+{}
+
+\[\frac{2489}{611}^\frac{|1878}{1}\qquad
+  \frac{1878}{45}^\frac{|611}{3}\qquad
+  \cdots\]
+
+\cols{Il \ordinalnum{2} resto $45$ è già tale che il suo quadrato $2025$ non supera $2489$.
+
+  Dunque se alla radice considerata $x_0=1878$ corrisponde una
+  soluzione dell'equaz.\ $x^2+29y^2=2489$, il suo primo termine $x$
+  non potrà essere che $45$. In effetto si ha}
+%
+{}
+
+\[2489 - 45^2 = 29 \cdot 16\qquad
+  \frac{2489 - 45^2}{29} = 4^2;\]
+
+\colsni{perciò $45^2+29\cdot 4^2 = 2489$. Alla radice considerata
+  corrisponde dunque la soluzione $(45,4)$.
+
+  --- Come si vede dagli esempii dati, se $x_0>\frac{m}{2}$ è una
+  radice della congruenza $x^2+q\equiv 0 \mod m$, per decidere se ad
+  essa radice corrisponda una soluzione (propria) dell'eq.\
+  $x^2 + qy^2=m$, non è nemmeno necessario sviluppare tutto il sistema
+  di divisioni $(m,x_0)$; ma basta fermarsi al primo resto, il cui
+  quadrato non supera $m$.
+
+  \paragraph{II Caso.} Nell'equazione $x^2 + qy^2 = m$ sia $q<0$:
+  possiamo scrivere senza altro sotto la forma}
+
+\begin{equation}
+  \tag{1}\label{quadeq-neg}
+  x^2 - q y^2 = m
+\end{equation}
+
+\colsni{dove supponiamo $q>0$, (naturalmente non quadrato perfetto).
+
+  Sappiamo che è sempre solubile l'equazione}
+%
+{}
+
+\begin{equation}
+  \tag{2}\label{quadeq-neg-1}
+  x^2 - q y^2 = 1.
+\end{equation}
+
+\cols{Ne sia $(\alpha,\beta)$ la soluzione minima. Allora:}
+{}
+
+\[\alpha^2 - q \beta^2 = 1\qquad
+  (\alpha^2 - q \beta^2)^2 = (\alpha^2 + q \beta^2)^2 - q(2\alpha\beta)^2 = 1\]
+
+\colsni{cioè simbolicamente}{}
+
+\[(\alpha,\beta)^2 = (\alpha^2 + q\beta^2, 2\alpha\beta)\]
+
+\colsni{così}{}
+
+\[(\alpha,\beta)^3 = \Bigl(\alpha (\alpha^2 + 3q \beta^2), \beta (3\alpha^2 + q\beta^2) \Bigr)\]
+
+\colsni{in generale}{}
+
+\begin{align*}
+  (\alpha, \beta)^n = \biggl[ &\left(\alpha^n + \binom{n}{2}\alpha^{n-2} \cdot \beta^2 q
+                               + \binom{n}{4}\alpha^{n-4} \cdot \beta^4 q^2 
+                               + \binom{n}{6}\alpha^{n-6} \cdot \beta^6 q^3
+                               + \cdots \right),\\
+                             &\left(\binom{n}{1}\alpha^{n-1} \cdot \beta
+                               + \binom{n}{3}\alpha^{n-3} \cdot \beta^3 q
+                               + \binom{n}{5}\alpha^{n-5} \cdot \beta^5 q^2
+                               + \cdots \right)
+                               \biggr].
+\end{align*}
+
+\cols{È noto che le soluzioni}{}
+
+\[(\alpha,\beta)^1, (\alpha,\beta)^2, (\alpha,\beta)^3, \ldots, (\alpha,\beta)^n, \ldots\]
+
+\colsni{ottenute in questo modo, sono \emph{tutte} le soluzioni
+  della~\eqref{quadeq-neg-1}, disposte in ordine di grandezza crescente.
+
+  Rivolgendoci ora all'equazione~\eqref{quadeq-neg}, si sa che se
+  (corrispondentemente a una determinata radice della congruenza}
+%
+{}
+
+\begin{equation}
+  \tag{3}\label{quadeq-neg-mod}
+  x^2 - q \equiv 0 \mod m )
+\end{equation}
+
+\colsni{ammette una soluzione, ne ammette infinite. Sia $(a,b)$ la
+  soluzione minima, corrispondente alla radice $x_0$
+  della~\eqref{quadeq-neg-mod}.
+
+  Se si pone}
+%
+{}
+
+\[(\alpha,\beta)^k = (\alpha_k,\beta_k),\]
+
+\colsni{dalle}{from}
+
+\[\alpha_k^2 - q \beta_k^2 = 1\qquad
+  a^2 - q b^2 = m\]
+
+\colsni{si deduce}{}
+
+\[(\alpha_k^2 - q\beta_k^2) (a^2 - qb^2)
+  = (a\alpha_k \pm qb_k^2)^2 - q (a\beta_k \pm b\alpha_k)^2 = m\]
+
+\colsni{cioè simbolicamente}{}
+
+\begin{align*}
+  (\alpha, \beta)^k \cdot (a,b) &= \{ a\alpha_k + qb\beta_k, a\beta_k + b\alpha_k \}\\
+  (\alpha, \beta)^{-k} \cdot (a,b) &= \{ a\alpha_k - qb\beta_k, a\beta_k - b\alpha_k \}.
+\end{align*}
+
+\cols{Ora è facile vedere che ponendo successivamente}{}
+
+\begin{gather*}
+  (a,b) = (a,b),\qquad
+  (\alpha,\beta)^{-1} \cdot (a,b) = (a_1,b_1),\qquad
+  (\alpha,\beta)^2 \cdot (a,b) = (a_2, b_2),\\
+  (\alpha,\beta)^{-2} \cdot (a,b) = (a_3,b_3),\qquad
+  (\alpha,\beta)^2 \cdot (a,b) = (a_4,b_4),\qquad \ldots,\\
+  (\alpha,\beta)^{-k} \cdot (a,b) = (a_{2k-1},b_{2k-1}),\qquad
+  (\alpha,\beta)^k \cdot (a,b) = (a_{2k}, b_{2k}),\qquad, \ldots
+\end{gather*}
+
+\colsni{si ottengono tutte le soluzioni della~\eqref{quadeq-neg}
+  (appartenenti alla radice considerata $x_0$), e che di più sono
+  disposte in ordine di grandezza crescente. --- Ma ritornando alla
+  soluzione minima $(a,b)$, troviamo le proprietà che la distinguono
+  dalle altre soluzioni.
+
+  Si ha}
+%
+{}
+
+\[(a_1,b_1) = (a\alpha - qb\beta, a\beta - b\alpha)\]
+
+\colsni{e per l'ipotesi che $(a,b)$ sia la minima}{}
+
+\[|a\alpha - qb\beta| > a\qquad |a\beta-b\alpha|>b.\]
+
+\cols{Se fosse}{}
+
+\[qb\beta - a\alpha > a\qquad b\alpha - a\beta > b\]
 
 \end{document}
 
