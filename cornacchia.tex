@@ -7,6 +7,7 @@
 \usepackage[italian,american]{babel}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{fmtcount}
+\usepackage{enumerate}
 
 \newtheorem{coroen}{Corollary}
 \newtheorem{coroit}{Corollario}
@@ -1224,7 +1225,7 @@ Avremo pertanto:}
   $2(xy)<P$.  --- Infatti, se con questo metodo non si ottenesse una
   certa soluzione $(a,b)$ soddisfacente alla condizione $2ab<P$,
   partendo da questa soluzione e operando come dianzi, si arriverebbe
-  a trovare una radice $x_0$ della cong.
+  a trovare una radice $x_0$ della cong.\
   $\sum C_h x^{n-h} \equiv 0 \mod P$ con $x_0>\frac{P}{2}$; e allora,
   se $y_0>\frac{P}{2}$ è la coniugata di $x_0$ (tale cioè che
   $x_0 y_0 \equiv \pm 1 \mod P$) applicando l'algoritmo della ricerca
@@ -1952,7 +1953,7 @@ Avremo pertanto:}
 \cols{In particolare, se $q=1$, le $x$ coincidono con le $y$, e si
   ritrova ciò che si era già dimostrato, che cioè la soluzione
   dell'eq.\ $x_2 + y^2 = m$, corrispondente alla radice $x_0$ della
-  cong. $x^2+1\equiv 0 \mod m$, è data dalla coppia dei resti
+  cong.\ $x^2+1\equiv 0 \mod m$, è data dalla coppia dei resti
   intermedii nel sistema di divisioni $(m,x_0)$.
 
   \emph{Es.} Sia l'equazione $x^2 + y^2 = 89$. La radice
@@ -2349,7 +2350,7 @@ Avremo pertanto:}
 \[x^2 - qy^2 = -m\]
 
 \colsni{se si indica con $(a_1,b_1)$ la soluzione minima
-  (corrispondente ad una determinata radice della cong.
+  (corrispondente ad una determinata radice della cong.\
   $x^2-q\equiv 0 \mod m$), si trova che}
 %
 {}
@@ -2403,19 +2404,19 @@ Avremo pertanto:}
 
 \cols{Sia $(a,b)$ una soluzione ottenuta con quel metodo: allora
   $ab<m$; e quindi, se $(\alpha,\beta)$ è, al solito, la soluzione
-  minima dell'equaz. $x^2 - qy^2 = 1$, sarà certamente $2ab < \beta m$
-  (almeno per $\beta > 1$); cioè, per quanto sappiamo, $(a,b)$ è la
-  soluzione minima della~\eqref{quadform}. --- Similmente dicasi per
-  l'equaz. $x^2 - qy^2 = -m$. Perciò, se il metodo delle divisioni
-  successive dà una soluzione dell'equazione $x^2 - qy^2 = \pm m$,
-  essa è necessariamente la minima (relativamente, s'intende, alla
-  radice della congruenza $x^2 - q \equiv 0 \mod m$, che si
-  considera).
+  minima dell'equaz.\ $x^2 - qy^2 = 1$, sarà certamente
+  $2ab < \beta m$ (almeno per $\beta > 1$); cioè, per quanto sappiamo,
+  $(a,b)$ è la soluzione minima della~\eqref{quadform}. --- Similmente
+  dicasi per l'equaz.\ $x^2 - qy^2 = -m$. Perciò, se il metodo delle
+  divisioni successive dà una soluzione dell'equazione
+  $x^2 - qy^2 = \pm m$, essa è necessariamente la minima
+  (relativamente, s'intende, alla radice della congruenza
+  $x^2 - q \equiv 0 \mod m$, che si considera).
 
   Ora questa soluzione minima, pur soddisfacendo alla condizione
   $2ab < m\beta$, non sempre soddisferà, alla condizione richiesta
   perchè essa possa ottenersi col metodo delle divisioni successive;
-  perciò con questo metodo applicato direttamente all'eq.
+  perciò con questo metodo applicato direttamente all'eq.\
   $x^2 - qy^2 = \pm m$, non sempre si ottiene una soluzione di essa; e
   anche ammettendo che si ottenesse, non si potrebbe poi assegnare il
   posto preciso da essa occupato nella successione dei resti.---Di qui
@@ -2460,8 +2461,335 @@ Avremo pertanto:}
 
 \[2\bar{x}\bar{y} < P.\]
 
+\cols{Sia la~\eqref{rho} solubile sotto la forma~\eqref{rho2} ed
+  $(\bar{x},\bar{y})$ ne sia una soluzione: allora}
+%
+{}
+
+\[\bar{y} = k\bar{x} \pm \sqrt{(k^2 - 1)x^2 + P}.\]
+
+\cols{Da cui si trae:}{}
+
+\begin{align}
+  \notag
+  (k^2 - 1)\bar{x}^2 + P &= z^2\qquad (z \text{ intero})\\
+  \tag{\(\lambda\)}\label{lambda}
+  z^2 - (k^2 - 1)\bar{x}^2 &= P.
+\end{align}
+
+\cols{Dunque, se è solubile la~\eqref{rho2}, è solubile anche
+  la~\eqref{lambda}; e viceversa.
+
+  Ora osserveremo che è solubile la}
+%
+{}
+
+\[z^2 - (k^2 - q)x^2 = 1\]
+
+\colsni{ed anzi $(k,1)$ ne è la soluzione minima.---Prendiamo allora
+  la soluzione minima $(\bar{z},\bar{x})$ della~\eqref{lambda}; per
+  quanto si è dimostrato, sarà}
+%
+{}
+
+\[2\bar{x}\bar{z} < P\beta\]
+
+\colsni{ma qui $\beta=1$, perciò}{}
+
+\[2\bar{x}\bar{z} < P.\]
+
+\cols{Ed essendo}{}
+
+\[\bar{z} > \bar{x}\qquad 2\bar{x}^2 < P\qquad \bar{x}^2 < \frac{P}{2},\]
+
+\colsni{se ne trae}{}
+
+\[\bar{z}^2 = k^2\bar{x}^2 + P - \bar{x}^2 > k^2\bar{x}^2\qquad \bar{z} > k\bar{x}.\]
+
+\cols{Presi così $\bar{z}$ ed $\bar{x}$, si ha}{}
+
+\[\bar{y} = k\bar{x} \pm \bar{z}\]
+
+\colsni{e prendendo il segno $-$, verrà}{}
+
+\[\bar{y} = k\bar{x} - \bar{z} = -(\bar{z} - k\bar{x}) < 0.\]
+
+\cols{Posto}{Setting}
+
+\[\bar{z} - k\bar{x} = y_1\qquad \bar{z} + k\bar{x} = y_2,\]
+
+\colsni{avremo così}{}
+
+\[\bar{x}^2 + \bar{y}_1^2 + 2k\bar{x}\bar{y}_1 = P\qquad
+  \bar{x}^2 + \bar{y}_2^2 - 2k\bar{x}\bar{y}_2 = P\]
+
+\colsni{e quindi certamente $2\bar{x}y_1 < P$.
+
+  In ogni caso dunque esiste una soluzione positiva $(x,y_1)$, che
+  soddisfa alla condizione sufficiente affinchè essa possa ottenersi
+  col metodo delle divisioni successive.
+
+  Ciò posto, sia $x_0 > \frac{P}{2}$ una radice della congruenza}
+%
+{}
+
+\[x^2 + 1 + 2kx \equiv 0 \mod P\]
+
+\colsni{e sia $y_0 > \frac{P}{2}$ tale che
+  $x_0 y_0 \equiv \pm 1 \mod P$.\footnotemark{} Siano
+  $x_1, x_2, \ldots, x_r = 1$ $y_1, y_2, \ldots, y_r = 1$ le
+  successioni dei resti nel sistema di divisioni $(P,x_0)$ e rispett.\
+  $(P,y_0)$.--- Formisi lo specchio:}
+%
+{}
+
+\footnotetext{Dalla $x_0^2 + 1 + 2kx_0 \equiv 0 \mod P$, si ricava
+  $x_0(x_0 + 2k) \equiv -1 \mod P$ e però
+  $y_0 \equiv \pm(x_0 + 2k) \mod P$.}
+
+\begin{equation}
+  \tag{S}\label{S-72}
+  \left\{
+    \begin{array}{rlllllll}
+      x_1 & x_2 & \cdots & x_{h-1} & x_h & x_{h+1} & \cdots &  x_r = 1  \\
+      1 = y_r & y_{r-1} & \cdots & y_{r-h+2} & y_{r-h+1} & y_{r-h} & \cdots & y_1 
+    \end{array}
+  \right.
+\end{equation}
+
+\cols{Se alla radice $x_0$ corrispondono soluzioni dell'equaz.}
+%
+{}
+
+\[x^2 + y^2 + 2kxy = P\]
+
+\colsni{la minima di esse si trova certamente in una delle colonne
+  dello specchio~\eqref{S-72}: si essa la $(x_h, y_{r-h+1})$. Per
+  quanto sappiamo, si ha:}
+%
+{}
+
+\[x_h \equiv y_{r-h+2} \mod y_{r-h+1}\qquad
+  y_{r-h+1} \equiv x_{h+1} \mod x_h.\]
+
+\cols{Sia $x_h > y_{r-h+1}$: allora $y_{r-h+1} = x_{h+1}$,
+  $x_h \equiv y_{r-h+2} \mod x_{h+1}$; ma è pure
+  $x_h \equiv x_{h+2} \mod x_{h+1}$, perciò $x_{h+2} = y_{r-h+2}$.
+
+  Ora $x_{h+3}, x_{h+4}, \ldots, x_r = 1$ sono i resti del sistema di
+  divisioni $(x_{h+1},x_{h+2})$;
+  $y_{r-h+3}, y_{r-h+4}, \ldots, y_r = 1$ sono i resti del sistema di
+  divisioni $(y_{r-h+1},y_{r-h+2})$. Ma poichè si è dimostrato che
+  $x_{h+1} = y_{r-h+1}$, $x_{h+2} = y_{r-h+2}$, i due sistemi
+  coincidono, cioè i resti $x_{h+3}, x_{h+4}, \ldots, x_r = 1$ sono
+  identici coi resti $y_{r-h+3}, y_{r-h+4}, \ldots, y_r = 1$.
+
+  Ne segue che $r-h = h$, cioè $r = 2h$ pari: lo specchio~\eqref{S-72}
+  diventa:
+}
+%
+{}
+
+\begin{equation}
+  \tag{S}
+  \left\{
+    \begin{array}{rlllllllll}
+      x_1 & x_2 & \cdots & x_{h-1} & x_h & x_{h+1} & x_{h+2} & \cdots &  x_{2h-1} & x_{2h} = 1  \\
+      1 = x_{2h} & x_{2h-1} & \cdots & x_{h+2} & x_{h+1} & y_{h} & y_{h-1} & \cdots & y_2 & y_1 
+    \end{array}
+  \right.
+\end{equation}
+
+\cols{Siccome due termini $x_\lambda, y_{2h-\lambda+1}$ soddisfano
+  alla congruenza:}
+%
+{}
+
+\[x_\lambda^2 + y_{2h-\lambda+1}^2 + (-1)^\lambda 2 kx_\lambda \cdot
+  y_{2h-\lambda-1} \equiv 0 \mod P\]
+
+\colsni{e per $\lambda \le h$ è $y_{2h-\lambda+1} = x_{2h-\lambda+1}$;
+  e per $\lambda > h$ è $x_\lambda = y_\lambda$ così possiamo dire che
+  due termini equidistanti dagli estremi nella \ordinalnum{1}[f] linea
+  o nella \ordinalnum{2}[f] dello specchi~\eqref{S-72}, soddisfano,
+  all'infuori del segno, alla congruenza:}
+%
+{}
+
+\[x^2 + y^2 + 2kxy \equiv 0 \mod P\]
+
+\colsni{e che i termini intermedii e nella \ordinalnum{1}[f] e nella
+  \ordinalnum{2}[f] linea soddisfano all'equazione}
+%
+{}
+
+\[x^2 + y^2 \pm 2kxy = P.\]
+
+\cols{Infatti, per i termini intermedii $x_h$, $x_{h+1} = y_{r-h+1}$
+  della \ordinalnum{1}[f] linea, si ha per ipotesi:}
+%
+{}
+
+\[x_h^2 + x_{h+1}^2 + 2kx_h \cdot x_{h+1} = P.\]
+
+\cols{Quanto ai termini intermedii della \ordinalnum{2}[f] linea
+  $y_h$, $y_{h+1}=x_{h+1}$, si osservi che}
+%
+{}
+
+\[y_h = (q_0 + t_0 + 2k)x_{h+1} + x_{h+2},\]
+
+\colsni{dove}{where}
+
+\[x_h - q_0 x_{h+1} = x_{h+2}\qquad t_0 = 0\]
+
+\colsni{perciò:}{}
+
+\begin{equation*}
+  y_h^2 + x_{h+1}^2 - 2ky_y \cdot x_{h+1} =
+  (x_h + 2kx_{h+1})^2 + x_{h+1}^2 - 2k(x_h + 2kx_{h+1})\cdot x_{h+1} =
+  x_h^2 + x_{h+1}^2 + 2kx_h x_{h+1} = P.
+\end{equation*}
+
+\cols{Ad identici risultati si perverrebbe, supponendo $y_{r-h+1} > x_h$.
+
+  Siano $q_1 = 1, q_2, q_3, \ldots, q_{2h}$ i quozienti nel sistema di
+  divisioni $(P, x_0)$: quelli del sistema $(P, y_0)$ saranno:}
+%
+{}
+
+\[q_1 = 1\qquad q_2' = x_{2h-1} - 1 = q_2, q_{2h}, q_{2h-1}, \ldots, q_4, q_3.\]
+
+\cols{Ora i quozienti $q_{h+3},q_{h+4},\ldots,q_{2h}$ sono quelli
+  dovuti al sistema di divisioni $(x_{h+1},x_{h+2})$; i quozienti
+  $q_h,q_{h+1},\ldots,q_4,q_3$ sono quelli dovuti al sistema
+  $(y_{h+1},y_{h+2})$; siccome i due sistemi coincidono, sarà:}
+%
+{}
+
+\[q_h = q_{h+3}\qquad q_{h-1} = q_{h+3}, \ldots, q_4 = q_{2h-1}\qquad
+  q_3 = q_{2h}.\]
+
+\cols{Riassumendo:
+
+  \guillemotleft{} Data l'equazione}
+%
+{}
+
+\[x^2 + y^2 + 2kxy = P\]
+
+\colsni{sia $x_0 > \frac{P}{2}$ una radice della congruenza}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{quad-form-inhom}
+  x^2 + 1 + 2kx \equiv 0 \mod P
+\end{equation}
+
+\colsni{e sia $y_0 > \frac{P}{2}$ tale che
+  $x_0 y_0 \equiv \pm 1 \mod P$ (cioè
+  $y_0 \equiv \pm(x_0 + 2k) \mod P$).
+
+  Si applichi alle coppie $(P,x_0)$, $(P,y_0)$ l'algoritmo della
+  ricerca del M.C.D. Se alla radice considerata $x_0$ si corrispondono
+  soluzioni della~\eqref{quad-form-inhom}, si perviene, nei due casi,
+  al resto $1$ dopo uno stesso numero pari $2h$ di divisioni. ---
+  L'ultima metà dei resti nel sistema $(P, x_0)$ coincide con l'ultima
+  metà dei resti nel sistema $(P,y_0)$.
+
+  Nel sistema $(P,x_0)$:
+
+  \begin{enumerate}[I.]
+  \item\label{cond-I} Il \ordinalnum{2} quoziente è uguale al
+    penultimo resto diminuito di $1$: fatta astrazione dai primi due
+    quozienti, nella successione dei rimanti i quozienti equidistanti
+    dagli estremi sono eguali (eccetto i due intermedii
+    $q_{h+1},q_{h+2}$ che possono anche essere disuguali, anzi saranno
+    sempre disuguali allora (e solo allora) che sia $k \ne 0$).
+  \item\label{cond-II} La somma dei prodotti in croce di due resti
+    qualunque consecutivi, e dei corrispondenti equidistanti dagli
+    estremi, è uguale a $P$.
+  \item\label{cond-III} Due resti qualunque equidistanti dagli estremi
+    soddisfano alla congruenza:
+  \end{enumerate}
+}
+%
+{}
+
+\[x^2 + y^2 \pm 2kxy \equiv 0 \mod P.\]
+
+\colsni{\begin{enumerate}[IV.]
+  \item I resti intermedii soddisfano all'equazione:
+  \end{enumerate}
+}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{quad-form-hom}
+  x^2 + y^2 \pm 2kxy = P.
+\end{equation}
+
+\cols{
+  \begin{enumerate}[IV.]
+  \item[] Similmente dicasi pel sistema $(P,y_0)$. \guillemotright{}
+  \end{enumerate}}
+%
+{}
+
+\cols{Che se il sistema $(P,x_0)$ $\{$~(oppure $(P,y_0)$~$\}$ non
+  offre le enunciate proprietà, si è certi che alla radice $x_0$ non
+  corrisponde alcuna soluzione dell'eq.~\eqref{quad-form-hom}.
+
+  Reciprocamente faremo vedere che se la condizione~\ref{cond-I} è
+  soddisfatta, alla radice $x_0$ corrisponde una soluzione
+  dell'equazione~\eqref{quad-form-hom}, la quale è data dalla coppia
+  dei resti intermedii.
+
+  Infatti, ammessa la condizione~\ref{cond-I}, ne risulta subito che
+  nei sistemi $(P,x_0)$, $(P,y_0)$ le ultime metà dei resti
+  coincidono; per cui sono verificate anche
+  le~\ref{cond-II},~\ref{cond-III}. --- Si ha poi, per una nota
+  proprietà:}
+%
+{}
+
+\[x_h \cdot y_h + y_{h+1}^2 = P.\]
+
+\cols{Ma}{}
+
+\[y_h = (q_0 + t_0 \pm 2k)y_{h+1} + y_{h+2} =
+  (q_0 + t_0 \pm 2k)x_{h+1} + x_{h+2} =
+  (q_0 \pm 2k)x_{h+1} + x_{h+2}\]
+
+\colsni{poichè qui $t_0 = 0$, $t_0$ essendo il quoziente della
+  divisione di $y_{h+1} = x_{h+1}$ per $x_h$.
+
+  Si ha poi:}
+%
+{}
+
+\begin{align*}
+  x_{h+2} &= x_h - q_0 x_{h+1}\\
+  y_h &= x_h \pm 2kx_{h+1}
+\end{align*}
+
+\colsni{laonde}{}
+
+\[x_h y_h + x_{h+1}^2 = x_h^2 + x_{h+1}^2 \pm 2kx_h x_{h+1} = P.\]
+
+\cols{Perciò la~\ref{cond-I} è la condizione necessaria e sufficiente
+  affinché alla radice $x_0$ corrisponda una soluzione
+  dell'equaz.~\eqref{quad-form-hom}.}
+%
+{}
+
+\secbreak
+
 \end{document}
 
 % Local Variables:
 % ispell-local-dictionary: "italian"
+% reftex-label-alist: (AMSTeX)
 % End:
