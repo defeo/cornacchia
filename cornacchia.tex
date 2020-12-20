@@ -2272,6 +2272,194 @@ Avremo pertanto:}
 
 \[qb\beta - a\alpha > a\qquad b\alpha - a\beta > b\]
 
+\colsni{si dedurrebbe}{}
+
+\[qb\beta > a(\alpha+1)\qquad b(\alpha-1) > \alpha\beta\]
+
+\colsni{e poichè}{}
+
+\[\alpha+1 > \sqrt{q}\beta\qquad \sqrt{q}\beta > \alpha - 1\]
+
+\colsni{moltiplicando membro a membro, verrebbe nei due casi}{}
+
+\[\sqrt{q}b < a\]
+
+\colsni{mentre, essendo $a^2 - qb^2 = m > 0$, si deduce}{}
+
+\[a > \sqrt{q}b.\]
+
+\cols{Non potrà dunque essere se non}{}
+
+\[a\alpha - qb\beta > a\qquad a\beta - b\alpha > b\]
+
+\colsni{cioè}{}
+
+\[a(\alpha - q) > qb\beta\qquad a\beta > b(\alpha - 1) + 2b\]
+
+\colsni{e moltiplicando membro a membro:}{}
+
+\begin{gather*}
+  a^2(\alpha - 1) \beta > qb^2\beta(\alpha - 1) + 2qb^2\beta\\
+  (a^2 - qb^2)(\alpha - 1) > 2qb^2\\
+  m(\alpha - 1) > 2qb^2\qquad b < \sqrt{\frac{m(\alpha - 1)}{2q}}
+\end{gather*}
+
+\colsni{poi}{then}
+
+\begin{gather*}
+  a^2 - \frac{\alpha - 1}{2}m < m\qquad a < \sqrt{\frac{m(\alpha + 1)}{2}}\\
+  2ab < m\beta\qquad a > b\frac{\alpha + 1}{\beta}.
+\end{gather*}
+
+\cols{Ne segue che se $m$ è $>\frac{\alpha+1}{2}$, i termini della
+  soluzione minima $(a,b)$ sono certamente minori di $m$.
+
+  Reciprocamente dimostriamo che se una certa soluzione $(a,b)$
+  dell'equazione~\eqref{quadeq-neg} soddisfa a una delle precedenti
+  condizione, p.e.\ alla $2ab < m\beta$, essa è necessariamente la
+  soluzione minima.
+
+  Sia $(a_1,b_1)$ la soluzione minima: allora esiste una soluzione
+  $(x,y)$ della~\eqref{quadeq-neg-1} tale che}
+%
+{}
+
+\[(x,y)^1 \cdot (a_1,b_1) = (a,b)\qquad (x,y)^{-1}(a,b) = (a_1,b_1)\]
+
+\colsni{cioè}{}
+
+\[ax - qby < a \qquad ay - bx < b\]
+
+\colsni{da cui, col procedimento sopra indicato, si ricaverebbe:}{}
+
+\[2ab > my\]
+
+\colsni{o anche, essendo $y \ge \beta$}{}
+
+\[2ab > m\beta;\]
+
+\colsni{e ciò è contro l'ipotesi.
+
+  Dunque la $(a,b)$ è necessariamente la soluzione minima.
+
+  Allo stesso modo, considerando l'equazione}
+%
+{}
+
+\[x^2 - qy^2 = -m\]
+
+\colsni{se si indica con $(a_1,b_1)$ la soluzione minima
+  (corrispondente ad una determinata radice della cong.
+  $x^2-q\equiv 0 \mod m$), si trova che}
+%
+{}
+
+\[a_1 \le \sqrt{\frac{m(\alpha - 1)}{2}} \quad
+  b_1 \le \sqrt{\frac{m(\alpha + 1)}{2q}} \quad
+  \frac{a_1}{b_1} \le \frac{\alpha - 1}{\beta} \quad
+  2a_1 b_1 < m\beta.\]
+
+\cols{In particolare per $m=1$, posto $a_1 = \alpha+1$,
+  $b_1 = \beta_1$, la soluzione minima dell'equaz.}
+%
+{}
+
+\[x^2 - qy^2 = -1\]
+
+\colsni{supposta solubile, soddisfa alle relazioni}
+%
+{}
+
+\[\alpha_1 \le \sqrt{\frac{\alpha - 1}{2}} \qquad
+  \beta_1 \le \sqrt{\frac{\alpha + 1}{2q}} \qquad
+  2\alpha_1 \beta_1 \le \beta.\]
+
+\cols{Ma poichè $\{(\alpha_1^2 + q\beta_1^2), 2\alpha_1\beta_1\}$
+  costituisce una soluzione della $x^2 - qy^2 = 1$, e non può essere
+  quindi $2\alpha_1\beta_1<\beta$, si deve ritenere il segno di
+  eguaglianza, cioè:}
+%
+{}
+
+
+\[\alpha_1 = \sqrt{\frac{\alpha - 1}{2}} \qquad
+  \beta_1 = \sqrt{\frac{\alpha + 1}{2q}} \qquad
+  2\alpha_1 \beta_1 = \beta.\]
+
+\cols{Adunque la soluzione minima $(\alpha_1,\beta_1)$ della
+  $x^2 - qy^2 = -1$ (se è solubile) si può ricavare dalla soluzione
+  minima $(\alpha,\beta)$ della $x^2 - qy^2 = 1$, e viceversa questa
+  da quella.
+
+  Veniamo finalmente ad applicare il metodo delle divisioni successive
+  alla risoluzione della equazione}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{quadform}
+  x^2 - qy^2 = m.
+\end{equation}
+
+\cols{Sia $(a,b)$ una soluzione ottenuta con quel metodo: allora
+  $ab<m$; e quindi, se $(\alpha,\beta)$ è, al solito, la soluzione
+  minima dell'equaz. $x^2 - qy^2 = 1$, sarà certamente $2ab < \beta m$
+  (almeno per $\beta > 1$); cioè, per quanto sappiamo, $(a,b)$ è la
+  soluzione minima della~\eqref{quadform}. --- Similmente dicasi per
+  l'equaz. $x^2 - qy^2 = -m$. Perciò, se il metodo delle divisioni
+  successive dà una soluzione dell'equazione $x^2 - qy^2 = \pm m$,
+  essa è necessariamente la minima (relativamente, s'intende, alla
+  radice della congruenza $x^2 - q \equiv 0 \mod m$, che si
+  considera).
+
+  Ora questa soluzione minima, pur soddisfacendo alla condizione
+  $2ab < m\beta$, non sempre soddisferà, alla condizione richiesta
+  perchè essa possa ottenersi col metodo delle divisioni successive;
+  perciò con questo metodo applicato direttamente all'eq.
+  $x^2 - qy^2 = \pm m$, non sempre si ottiene una soluzione di essa; e
+  anche ammettendo che si ottenesse, non si potrebbe poi assegnare il
+  posto preciso da essa occupato nella successione dei resti.---Di qui
+  l'opportunità di una trasformazione della~\eqref{quadform}, in modo
+  che la trasformata sia completamente risolubile col nostro metodo.
+
+  Premettiamo alcune osservazioni sull'equazione}
+%
+{}
+
+\begin{equation}
+  \tag{\(\rho\)}\label{rho}
+  x^2 + y^2 + 2kxy = P.
+  \qquad k>0
+\end{equation}
+
+\cols{Anzi tutto, se $(\bar{x},\bar{y})$ ne è una soluzione, tali sono
+  pure, all'infuori del segno, $(\bar{x} + 2k\bar{y}, \bar{y})$,
+  $(\bar{x}, \bar{y} + 2k\bar{x})$. Volendo considerare solo soluzioni
+  positive, la~\eqref{rho} dà luogo alle due equazioni:}
+%
+{}
+
+\begin{align}
+  \tag{\(\rho_1\)}\label{rho1}
+  x^2 + y^2 + 2kxy &= P\\
+  \tag{\(\rho_2\)}\label{rho2}
+  x^2 + y^2 - 2kxy &= P.
+\end{align}
+
+\cols{Ora dico che se la~\eqref{rho} è solubile, esiste sempre una
+  soluzione $(a,b)$ di essa, tale che $2ab < P$.
+
+  Se la~\eqref{rho} è solubile sotto la forma~\eqref{rho1} la cosa è
+  evidente; poichè se}
+%
+{}
+
+\[\bar{x}^2 + \bar{y}^2 + (2k\bar{x}\bar{y}) = P\]
+
+\colsni{è certamente}{}
+
+\[2\bar{x}\bar{y} < P.\]
+
 \end{document}
 
 % Local Variables:
