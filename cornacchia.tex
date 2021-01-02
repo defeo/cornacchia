@@ -2787,7 +2787,213 @@ Avremo pertanto:}
 
 \secbreak
 
+\cols{--- Ciò premesso, sia dunque da risolvere l'equazione:}
+%
+{}
+
+\begin{equation}
+  \tag{\(\lambda\)}\label{lambda}
+  x^2 - qy^2 = P.
+\end{equation}
+
+\cols{Sia $(\alpha, \beta)$ la soluzione minima dell'equaz.\
+  $x^2 - qy^2 = 1$: operiamo la trasformazione}
+%
+{}
+
+\[x_1 = y\qquad y_1 = \beta x + \alpha y\]
+
+\colsni{da cui}{}
+
+\[x = \frac{\alpha x_1 - y_1}{\beta}\qquad y = x_1.\]
+
+\cols{La proposta equazione si trasforma allora nell'altra:}
+%
+{}
+
+\begin{equation}
+  \tag{\(\rho\)}\label{rho}
+  x_1^2 + y_1^2 - 2\alpha x_1 y_1 = P \cdot \beta^2.
+\end{equation}
+
+\cols{Le formule di trasformazione e la forma
+  dell'equaz.~\eqref{lambda} mostrano che ad ogni soluzione intera
+  della~\eqref{lambda} corrisponde una soluzione intera
+  della~\eqref{rho}, e viceversa. Dunque la risoluzione
+  della~\eqref{lambda} è ricondotta alla risoluzione
+  della~\eqref{rho}; e quella sarà o no solubile, secondo che è o non
+  è solubile questa.---Ora, per quanto precede, note che siano le
+  radici della congruenza}
+%
+{}
+
+\[x_1^2 + 1 \pm 2\alpha x_1 \equiv 0 \mod P\beta^2\]
+
+\colsni{si può subito constatare se la~\eqref{rho} ammette o no soluzioni.
+
+  Se $x_0 > \frac{P\beta^2}{2}$ è una radice della precedente
+  congruenza, il sistema di divisioni $(P\beta^2, x_0)$ deve offrire
+  le seguenti particolarità:
+
+  Il \ordinalnum{2} quoziente dev'essere uguale al penultimo resto,
+  diminuito di $1$: il numero delle divisioni dev'essere pari. Fatta
+  astrazione dai due primi quozienti, nella serie dei restanti i
+  quozienti equidistanti dagli estremi devono essere uguali (eccetto i
+  due intermedii).
+
+  Se il sistema $(P\beta^2, x_0)$ soddisfa a queste condizioni, allora
+  alla radice $x_0$ corrisponde una soluzione $(x_1, y_1)$
+  della~\eqref{rho}, la quale è precisamente fornita dalla coppia dei
+  resti intermedii.
+
+  $\{$ Una seconda soluzione $(x_1, y_1 \pm 2\alpha)$ sarebbe fornita
+  dai resti intermedii nel sistema $(P\beta^2, y_0)$, dove
+  $y_0 > P\beta^2$ è $\equiv \pm (x_0 \pm 2\alpha) \mod P\beta^2$
+  $\}$.
+
+  Se ciò non accade, alla $x_0$ non corrisponde alcuna soluzione
+  della~\eqref{rho}, se ne deduce subito una soluzione}
+%
+{}
+
+\[x = \frac{y_1 - \alpha x_1}{\beta}\qquad y = x_1\]
+
+\colsni{dell'equazione proposta}{}
+
+\begin{equation}
+  \tag{\(\lambda\)}
+  x^2 - qy^2 = P.
+\end{equation}
+
+\cols{E siccome $x_1$ soddisfa all'equaz.\ $z^2 - q x_1^2 = P$, ed
+  inoltre $(z_1, x_1)$ è la soluzione minima corrispondente alla
+  radice considerata $x_0$, sarà pure $x = z_1$, $y = x_1$ la
+  soluzione minima della~\eqref{lambda} corrispondente a quella radice.
+
+  Osserviamo da ultimo che ad una radice $\bar{x}$ della
+  congruenza}
+%
+{}
+
+\begin{equation}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \tag{1}\label{sqrt}
+  x^2 - q \equiv \mod P
+  \footnote[2]{\emph{Sic}, missing $0$ on right hand side of
+    equation.}
+\end{equation}
+
+\colsni{corrispondono $\beta$ radici della congruenza}
+%
+{}
+
+\begin{equation}
+  \tag{2}\label{sqrt-complete}
+  x_1^2 + 1 \pm 2\alpha x_1 \equiv 0 \mod P
+\end{equation}
+
+\colsni{che sono della forma}{}
+
+\[x_1 = \alpha + \beta (\bar{x} + kP)\]
+
+\colsni{essendo $k$ un intero che può assumere i valori
+  di\footnotemark{} $0$ a $\beta - 1$.}
+%
+{}
+
+\footnotetext{\emph{Sic}.}
+
+\cols{Operando su tutte quelle $\beta$ radici, si potrà constatare se
+  alla radice considerata $\bar{x}$ della congruenza~\eqref{sqrt}
+  corrisponde o no una soluzione dell'equaz.~\eqref{lambda}; e in caso
+  affermativo, trovare questa soluzione.
+
+  \emph{Es.} Sia l'equazione}
+%
+{}
+
+\[x^2 - 5y^2 = 79.\]
+
+\cols{Si ha qui $\alpha = 9$, $\beta = 4$, e l'equazione trasformata è:}
+%
+{}
+
+\begin{equation}
+  \tag{\(\rho\)}
+  x_1^2 + y_1^2 - 2 \cdot 9 x_1 y_1 = 1264.
+\end{equation}
+
+\cols{La radice della $x^2 - 5 \equiv 0 \mod 79$ è $\bar{x} = 59$: a
+  questa $x$ corrispondono $4$ radici $> \frac{1264}{2}$ della
+  congruenza}
+%
+{}
+
+\begin{equation*}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  x_1^2 + 1 - 2 \cdot 9 x_1 = \mod 1264
+  \footnote[2]{\emph{Sic}, missing 0 on right hand side of equation.}
+\end{equation*}
+
+\colsni{e sono}{}
+
+\[x_1 = 1010\qquad
+  x_2 = 703\qquad
+  x_3 = 877\qquad
+  x_4 = 1193.\]
+
+\colsni{Ad una sola di queste radici può corrispondere un'eventuale
+  soluzione della~\eqref{rho}. Operando sulla $x_2 = 703$ si trova il
+  sistema di divisioni}
+%
+{}
+
+\[\frac{1264}{561}^\frac{|703}{1}\qquad
+  \frac{703}{142}^\frac{|561}{1}\qquad
+  \frac{561}{135}^\frac{|142}{3}\qquad
+  \frac{142}{7}^\frac{|135}{1}\qquad
+  \frac{135}{2}^\frac{|7}{19}\qquad
+  \frac{7}{1}^\frac{|2}{3}\]
+
+\colsni{il quale soddisfa alla volute condizioni per l'esistenza della
+  soluzione della~\eqref{rho}, la quale è precisamente fornita dai
+  resti intermedii}
+%
+{}
+
+\[y_1 = 135\qquad x_1 = 7;\]
+
+\colsni{di qui si trae una soluzione}{}
+
+\[x = \frac{9 \cdot 7 - 135}{4} = -18\qquad y = x_1 = 7\]
+
+\colsni{dell'equaz.\ $x^2 - 5y^2 = 79$.
+
+  Il metodo ora esposto per la rizoluzione dell'equaz.\
+  $x^2 - qy^2 = P$, sarebbe comodo ed anche elegante, se (oltre al
+  richiedere la conoscenza della soluzione minima dell'eq.\
+  $x^2 - qy^2 = 1$) non presentasse un inconveniente. ---Come abbiamo
+  visto, ad una radice $\bar{x}$ della congruenza
+  $x^2 - q \equiv 0 \bmod P$ corrispondono $\beta$ radici
+  $> \frac{P\beta^2}{2}$ della cong.\
+  $x_1^2 + 1 - 2\alpha x_1 \equiv 0 \bmod P\beta^2$; e il nostro
+  metodo esige di operare su tutte queste radici, mentre una sola è
+  utile, poiché ad una sola può corrispondere una (eventuale)
+  soluzione della $x_1^2 + y_1^2 - 2\alpha x_1 y_1 = P\beta^2$ e
+  quindi una (eventuale) soluzione dell'equaz.\ proposta.--- Sarebbe
+  perciò desiderabile (specialmente quando $\beta$ è abbastanza
+  grande) avere un criterio per decidere su quale di quelle $\beta$
+  radici si possa operare (con esclusione di tutte le altre), per la
+  ricerca dell'eventuale soluzione dell'equazione}
+%
+{}
+
+\[x_1^2 + y_1^2 - 2\alpha x_1 y_1 = P\beta^2.\]
+
+\secbreak
+
 \end{document}
+
 
 % Local Variables:
 % ispell-local-dictionary: "italian"
