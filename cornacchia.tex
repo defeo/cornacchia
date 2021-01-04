@@ -2543,9 +2543,9 @@ Avremo pertanto:}
 %
 {}
 
-\footnotetext{Dalla $x_0^2 + 1 + 2kx_0 \equiv 0 \mod P$, si ricava
+\footnotecols{Dalla $x_0^2 + 1 + 2kx_0 \equiv 0 \mod P$, si ricava
   $x_0(x_0 + 2k) \equiv -1 \mod P$ e però
-  $y_0 \equiv \pm(x_0 + 2k) \mod P$.}
+  $y_0 \equiv \pm(x_0 + 2k) \mod P$.}{}
 
 \begin{equation}
   \tag{S}\label{S-72}
@@ -2989,6 +2989,889 @@ Avremo pertanto:}
 {}
 
 \[x_1^2 + y_1^2 - 2\alpha x_1 y_1 = P\beta^2.\]
+
+\secbreak
+
+\cols{Diamo qui un'altra trasformazione dell'equaz.}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{quadform-P}
+  x^2 - qy^2 = P
+\end{equation}
+
+\colsni{applicabile solo (pel nostro scopo) in un caso speciale.
+
+  Supponiamo che la soluzione minima $(\alpha, \beta)$
+  dell'equaz. $x^2 - qy^2 = 1$ soddisfi alla condizione}
+%
+{}
+
+\[\alpha + 1 \equiv 0 \bmod beta\]
+
+\colsni{da cui $\frac{\alpha + 1}{\beta} = k$ intero.
+
+  Si ponga}
+%
+{}
+
+\[x = x_1 - k y_1 \qquad y = y_1;\]
+
+\colsni{la~\ref{quadform-P} si trasforma nell'equazione}
+%
+{}
+
+\begin{equation}
+  \tag{2}\label{quadform-trans}
+  x_1^2 + (k^2 - q)y_1^2 - 2k x_1 y_1 = P
+\end{equation}
+
+\colsni{dove}{where}
+
+\[k^2 - q = \frac{(\alpha + 1)^2 - q\beta^2}{\beta^2} > 0.\]
+
+\cols{Risolvendo la~\eqref{quadform-trans} rispetto ad $x_1$, si ricava:}
+%
+{}
+
+\[x_1 = ky_1 \pm \sqrt{k^2 y_1^2 + P - (k^2 - q)y_1^2}
+  = k y_1 \pm \sqrt{P + qy_1^2}.\]
+
+\cols{Ora se supponiamo che la~\eqref{quadform-trans} sia solubile, ed
+  $(x_1, y_1)$ ne sia una soluzione, dev'essere
+  
+  \[P + q y_1^2 = z_1^2 \quad\text{($z_1$ intero)};\]
+
+  cioè
+}
+%
+{}
+
+\[z_1^2 - q y_1^2 = P.\]
+
+\colsni{Ora possiamo supporre che $(z_1, y_1)$ sia precisamente la
+  soluzione minima di questa equazione; allora, per una nota
+  proprietà, avremo:}
+%
+{}
+
+\[\frac{2(\alpha + 1)}{\beta^2} y_1^2 < P.\]
+
+\cols{Ma}{But}
+
+\[\frac{2(\alpha + 1)}{\beta^2} =
+  \frac{(\alpha + 1)^2 - q_1 \beta^2}{\beta^2} = k^2 - q;\]
+
+\colsni{quindi}{}
+
+\begin{gather*}
+  (k^2 - q) y_1^2 < P\\
+  |z_1| = \sqrt{k^2 y_1^2 + P - (k^2 - q) y_1^2} > |ky_1|.
+\end{gather*}
+
+\cols{Perciò uno dei due valori}{}
+
+\[x_1 = ky_1 + z_1 \qquad x_2 = ky_1 - z_1\]
+
+\colsni{è positivo, l'altro negativo, qualunque sia il segno che si
+  voglia attribuire ad $y_1$ e a $z_1$. --- Se prendiamo, p.\ es.,
+  $y_1$ negativamente, e $z_1 > 0$, allora $x_1 > 0$; per cui}
+%
+{}
+
+\[x_1^2 + (k^2 - q)y_1^2 + 2|k x_1 y_1| = P.\]
+
+\cols{Quindi certamente la soluzione $(x_1, y_1)$ soddisfa alla condizione}
+%
+{}
+
+\[|x_1| \{|x_1| + |y_1|\} < P \qquad
+  |y_1| \{|x_1| + |y_1|\} < P.\]
+
+\cols{Perciò l'equazione trasformata (e però anche la data) è
+  risolubile completamente col metodo delle divisioni successive,
+  quale si è applicato all'equaz.}
+% 
+{}
+  
+\[x^2 + q y^2 = m\qquad (q > 0).\]
+
+\cols{Alle stesse conclusioni si perverrebbe prendendo $y_1$ positivo,
+  e (quindi) $x_2$ negativo.}
+%
+{}
+
+\section*{\selectlanguage{italian}Confronto del metodo delle divisioni
+  successive col metodo della teoria delle forme quadratiche (Gauss e
+  Dirichlet).}
+
+\cols{Ci riferiremo solo all'equazione}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{quadform-pos}
+  x^2 + qy^2 = m\qquad q > 0
+\end{equation}
+
+\colsni{che, come abbiamo visto, si risolve completamente col metodo
+  delle divisioni successive. --- Per istituire il nostro confronto,
+  seguiremo la via che si presenta ovvia nella trattazione
+  della~\eqref{quadform-pos}. --- Poichè, anche soddisfatta la
+  condizione necessaria che sia $-q$ res.\ quad.\ di $m$, non sempre
+  la~\eqref{quadform-pos} è solubile, si presenta spontanea la
+  domanda: Qual'è il minimo valore di $h$, per cui è solubile
+  l'equazione}
+%
+{}
+
+\begin{equation}
+  \tag{2}\label{quadform-min}
+  x^2 + qy^2 = h\cdot m\;?\; (\footnotemark{})
+\end{equation}
+
+\footnotecols{Alla considerazione di questo minimo valore $h$ si deve
+  senza dubbio la genesi del concetto di \emph{ridotta} nella teoria
+  delle forme quadratiche.}{}
+
+\cols{Naturalmente questo minimo si potrà trovare corrispondentemente
+  ad ogni radice della congruenza}
+%
+{}
+
+\begin{equation}
+  \tag{3}\label{sqrt-m}
+  x^2 + q \equiv 0 \mod m.
+\end{equation}
+
+\cols{Sia dunque $\alpha$ una radice della~\eqref{sqrt-m}, talchè:}
+%
+{}
+
+\[\alpha^2 + q = h\cdot m.\]
+
+\cols{Si possono ottenere tutte le soluzioni della congruenza}
+%
+{}
+
+\[x^2 + qy^2 \equiv 0 \mod m\]
+
+\colsni{corrispondenti alla radice $\alpha$ della~\eqref{sqrt-m},
+  ponendo:}
+%
+{}
+
+\[\bar{x} = \lambda p - \rho \alpha\qquad
+  \bar{y} = \lambda_1 p - \rho\]
+
+\colsni{con $\lambda_1\alpha = \lambda = 1$.
+
+  Allora si ha:}
+%
+{}
+
+\[\bar{x}^2 + q\bar{y}^2 =
+  \rho^2 hm - 2\rho m(\alpha\lambda + q\lambda_1) + m^2 (\lambda^2 + q\lambda_1^2) =
+  m[\rho^2 h - 2\rho(\alpha\lambda + q\lambda_1) + m(\lambda^2 + q\lambda_1^2)].\]
+
+\cols{Quando due interi $\bar{x}, \bar{y}$ soddisfano alla relazione
+  $\bar{x}^2 + q\bar{y}^2 = k\cdot m$, chiameremo $k$ il
+  \emph{coefficiente} di $m$ relativo alla soluzione
+  $(\bar{x},\bar{y})$. --- Qui avremo:}
+%
+{}
+
+\[k = \rho^2 h - 2\rho(\alpha\lambda + q\lambda_1) + m(\lambda^2 + q\lambda_1^2).\]
+
+\cols{Il nostro scopo è quello di abbassare, se è possibile, il coefficiente $h$ relativo alla soluzione $(\alpha, 1)$: dovremo dunque porre:}
+%
+{}
+
+\[\rho^2 h - 2\rho(\alpha\lambda + q\lambda_1) + m(\lambda^2 + q\lambda_1^2) < h\]
+
+\colsni{cioè}{}
+
+\[\rho^2 h - 2\rho(\alpha\lambda + q\lambda_1) + m(\lambda^2 + q\lambda_1^2) - h < 0.\]
+
+\cols{Le radici dell'equazione}{}
+
+\[\rho^2 h - 2\rho(\alpha\lambda + q\lambda_1) + m(\lambda^2 + q\lambda_1^2) - h = 0\]
+
+\colsni{dove $\rho$ si riguarda come incognita, sono:}
+%
+{}
+
+\[\rho_1 = \frac{\alpha\lambda + q\lambda_1 + \sqrt{h^2 - q}}{h}\qquad
+  \rho_2 = \frac{\alpha\lambda + q\lambda_1 - \sqrt{h^2 - q}}{h}.\]
+
+\cols{Allora si può scrivere l'equazione sotto la forma}
+%
+{}
+
+\begin{equation}
+  \tag{4}\label{quadeq-fact}
+  h(\rho - \rho_1)(\rho - \rho_2) = 0.
+\end{equation}
+
+\cols{Se fosse $h^2 < q$, $\rho_1$, $\rho_2$ sarebbero complessi: non
+  potrebbe per nessun valore di $\rho$, il primo membro
+  della~\eqref{quadeq-fact} diventare negativo. In questo caso dunque
+  il coefficiente $h$ non si potrebbe ulteriormente abbassare, e
+  sarebbe quindi il coefficiente minimo (sempre relativamente alla
+  considerata radice $\alpha$). Supponiamo pertanto $h^2 > q$. Allora
+  il \ordinalnum{1} membro della~\eqref{quadeq-fact} riesce negativo
+  per tutti e soli i valori di $\rho$ compresi tra $\rho_1$ e
+  $\rho_2$. Siccome noi consideriamo solo valori interi di $\rho$,
+  così bisognerà vedere se tra $\rho_1$ e $\rho_2$ è compreso qualche
+  intero.---Intanto è facile vedere che tra $\rho_1$ e $\rho_2$ non
+  possono essere compresi più di 2 interi, giacchè si ha
+  $\rho_1 - \rho_2 < 2$.
+
+  Sia $n$ il quoziente, $r$ il resto della divisione di
+  $\alpha\lambda + q\lambda_1$ per $h$; e poniamo
+  $\sqrt{h^2 - q} = s < h$: avremo:}
+%
+{}
+
+\[\rho_2 = n + \frac{r - s}{h}\qquad \rho_1 = n + \frac{r + s}{h}.\]
+
+\cols{Se $r < s$, evidentemente tra $\rho_2$ e $\rho_1$ è compreso
+  l'intero $n$; per l'irreducibilità del coefficiente $h$ è dunque
+  necessario che sia $r > s$.
+
+  Ora mostriamo che questa condizione è altresì sufficiente. Prima
+  però osserveremo che $r$ si può sempre supporre $< \frac{h}{2}$,
+  prendendo convenientemente $\lambda, \lambda_1$, pur soddisfacenti
+  alla condizione $\lambda_1\alpha - \lambda = 1$. Allora, affinché
+  tra $\rho_2$ e $\rho_1$ sia compreso un qualche intero, bisogna che
+  sia $r + s > h$; diseguaglianza che combinata con la $r > s$ darebbe
+  $2r > h$, $r > \frac{h}{2}$, mentre abbiamo supposto
+  $r < \frac{h}{2}$. Dunque se $r > s$, $h$ è il coefficiente minimo.
+
+  Se $r < s$, da $h$ si può dedurre un coefficiente minore $h_1$ con
+  la corrispondente soluzione $(\alpha_1, \beta_1)$ tale che}
+%
+{}
+
+\[\alpha_2^2 + q\beta_1^2 = h_1 \cdot m.\]
+
+\cols{Con lo stesso processo si potrà ancora abbassare $h_1$, purchè
+  $r_1 < s_1$, essendo $r_1$ il resto $< \frac{h_1}{2}$ della
+  divisione di $\alpha_1\lambda' + q\lambda_1'\cdot\beta_1$ per $h_1$
+  (con $\alpha_1\lambda_1' - \beta_1\cdot\lambda' = 1$,
+  $s_1 = \sqrt{h_1^2 - q}$).
+
+  Se $r_1 > s_1$ sarà $h_1$ il coefficiente minimo. --- Ora, essendo}
+%
+{}
+
+\[(\alpha_1^2 + q\beta_1^2) \cdot ({\lambda'}^2 + q{\lambda_1'}^2) =
+  (\alpha_1\lambda' + q\lambda_1'\beta_1)^2 + q \equiv 0 \mod h_1\]
+
+\colsni{si scorge come $r_1$ sia la radice $<\frac{h_1}{2}$ della
+  congruenza}
+%
+{}
+
+\[t^2 + q \equiv 0 \mod h_1.\]
+
+\cols{La condizione $r_1 > s_1$ equivale all'altra}
+%
+{}
+
+\[r_1^2 + q > h_1^2.\]
+
+\cols{Concludiamo:
+
+  \guillemotleft{} La condizione necessaria e sufficiente affinché $h$
+  sia il coefficiente minimo dell'equaz.}
+%
+{}
+
+\[x^2 + qy^2 = h\cdot m\]
+
+\colsni{corrispondentemente a una certa radice $\alpha$ della cong.\
+  $x^2 + q \equiv 0 \mod m$, (cioè il minimo tra i coefficienti che si
+  possono ottenere mediante tutte le soluzioni della cong.\
+  $x^2 + qy^2 \equiv 0 \mod m$, relative alla radice $\alpha$), si è
+  che si abbia}
+%
+{}
+
+\[r^2 + q > h^2\]
+
+\colsni{dove $r < \frac{h}{2}$ è la radice della cong.\
+  $t^2 + q \equiv 0 \mod h$ corrispondentemente alla radice $\alpha$
+  \guillemotright{}.
+
+  Di qui un metodo rapido per trovare il minimo coefficiente, e quindi
+  un criterio per decidere se l'equazione $x^2 + qy^2 = m$ sia
+  solubile o meno.---Sia al solito $\alpha$ una radice della
+  congruenza}
+%
+{}
+
+\[x^2 + q \equiv 0 \mod m\]
+
+\colsni{talché}{such that}
+
+\[\alpha^2 + q = h\cdot m.\]
+
+\cols{Sia $|\alpha_1| < \frac{h}{2}$ il resto della divisione di
+  $\alpha$ per $h$: e pongasi}
+%
+{}
+
+\[\alpha_1^2 + q = h \cdot h_1.\]
+
+\cols{Sia poi $|\alpha_2|$ la minima radice assoluta della
+  congruenza:}
+%
+{}
+
+\[\alpha_1 \equiv x \mod h_1\]
+
+\colsni{talchè}{such that}
+
+\[\alpha_2^2 + q = h_1 \cdot h_2.\]
+
+\cols{Seguitando a questo modo, si ottengano successivamente le
+  relazioni:}
+%
+{}
+
+\begin{align*}
+  \alpha^2 + q &= h \cdot m\\
+  \alpha_1^2 + q &= h \cdot h_1\\
+  \alpha_2^2 + q &= h_2 \cdot h_1\\
+  &\cdots\\
+  \alpha_s^2 + q &= h_{s-1} \cdot h_s.
+\end{align*}
+
+\cols{Si dovrà arrivare necessariamente ad un primo $h_s >
+  h_{s-1}$. Ora dalle}
+%
+{}
+
+\[\alpha^2 + q = h \cdot m\qquad \alpha_1^2 + q = h \cdot h_1\]
+
+\cols{si ricava}{}
+
+\[(\alpha \alpha_1 \pm q)^2 + q(\alpha \mp \alpha_1)^2 = h^2 \cdot h_1 \cdot m.\]
+
+\cols{Ma $\alpha \equiv \pm \alpha_1 \mod h$; e quindi
+  $\alpha \alpha_1 + q$, $\alpha - \alpha_1$ sono divisibili per $h$;
+  oppure tali sono $\alpha \alpha_1 - q$, $\alpha + \alpha_1$. Posto
+  $\alpha \alpha_1 \mp q = h \cdot a$,
+  $\alpha \pm \alpha_1 = h \cdot b$, avremo:}
+%
+{}
+
+\[a^2 + qb^2 = h_1 \cdot m.\]
+
+\cols{Poi da quest'ultima equazione de dalla}
+%
+{}
+
+\[\alpha_2^2 + q = h_1 \cdot h_2\]
+
+\colsni{si trae}{}
+
+\[(\alpha^2 + qb^2) (\alpha_2^2 + q) =
+  (a\alpha_2 \pm qb)^2 + q(a \pm \alpha_2b)^2 =
+  h_1^2 \cdot h_2 \cdot m.\]
+
+\cols{Ma}{But}
+
+\[a - b\alpha_2 \equiv
+  \frac{\alpha\alpha_1 \pm q - (\alpha \mp \alpha_1)\alpha_1}{h} \equiv
+  \pm \frac{\alpha_1^2 + q}{h} \equiv \frac{h \cdot h_1}{h} \equiv 0
+  \mod h_1\]
+
+\colsni{perciò, ponendo}{}
+
+\[\frac{a - b\alpha_2}{h_1} = a_1 \qquad
+  \frac{a\alpha_2 + qb}{h_1} = b_1\]
+
+\colsni{avremo:}{}
+
+\[a_1^2 + qb_1^2 = h_2 \cdot m\]
+
+\colsni{con $a_1, b_1$ interi.
+
+  Così proseguendo, si dimostra che è solubile l'equazione}
+%
+{}
+
+\[x^2 + qy^2 = h_{s-1} \cdot m\]
+
+\colsni{e se ne trova una soluzione $(a_{s-2}, b_{s-2})$}
+%
+{}
+
+\[a_{s-2}^2 + qb_{s-2}^2 = h_{s-1} \cdot m.\]
+
+\cols{Ora, poichè}{Now, since}
+
+\[\alpha_s^2 + q = h_{s-1} \cdot h_s > h_{s-1}^2\]
+
+\colsni{(essendo $h_s > h_{s-1}$) risulta, per quanto precede, che
+  $h_{s-1}$\footnotemark{} è il coefficiente minimo corrispondente
+  alla radice $\alpha$ che abbiamo considerata. --- che se a questa
+  radice corrisponde una soluzione dell'eq.}
+%
+{}
+
+\footnotetext{1 is illegible.}
+
+\[x^2 + qy^2 = m\]
+
+\colsni{dovrà essere $h_{s-1} = 1$.
+
+  Il metodo esposto permette dunque di trovare, corrispondentemente ad
+  una radice $\alpha$ della congr.}
+% 
+{}
+
+\[x^2 + q \equiv 0 \mod m\]
+
+\colsni{il coefficiente minimo dell'eq.}
+%
+{}
+
+\[x^2 + qy^2 = h \cdot m\]
+
+\colsni{cioè il minimo valore di $h$ per cui questa equazione è
+  solubile. Se questo minimo è $=1$, allora alla radice considerata
+  $\alpha$ corrisponde una soluzione dell'eq.\ $x^2 + qy^2 = m$, che
+  si può ottenere col processo sovra esposto.
+
+  Ora è facile riconoscere che il metodo precedente, che chiameremo
+  \emph{metodo del minimo coefficiente}, coincide col metodo della
+  teoria delle forme ridotte, per le forme quadratiche a determinante
+  negativo.
+
+  Infatti, per risolvere l'equaz.}
+%
+{}
+
+\begin{equation}
+  \tag{1}\label{quadform-84}
+  x^2 + qy^2 = m
+\end{equation}
+
+\colsni{col sussidio di quella teoria, si procede così:
+
+  Sia $\alpha$ una radice della congruenza}
+%
+{}
+
+\[x^2 + q \equiv 0 \mod m,\]
+
+\colsni{talché}{such that}
+
+\[\alpha^2 + q = h \cdot m.\]
+
+\cols{Se l'equazione~\eqref{quadform-84} è solubile (relativamente
+  alla radice $\alpha$), la forma $(m, \alpha, h)$ dev'essere
+  equivalente alla ridotta $(1, 0, q)$. Si comincia dunque col ridurre
+  la forma $(m, \alpha, h)$ operando nel seguente modo.
+
+  Sia $\alpha_1$ la radice minima positiva della congruenza}
+%
+{}
+
+\[\alpha \equiv -\alpha_1 \mod k\]
+
+\colsni{talchè}{such that}
+
+\[\alpha + \alpha_1 = \delta_1 \cdot h\]
+
+\cols{Con ciò, posto}{}
+
+\[\alpha_1^2 + q = h \cdot h_1\]
+
+\colsni{la forma $(m, \alpha, h)$ si trasforma nell'equivalente
+  $(h, \alpha_1, h_1)$.
+
+  Su questa si opera come sulla primitiva, si cerca cioè la radice
+  minima positiva della congruenza}
+%
+{}
+
+\[\alpha_1 \equiv -\alpha_2 \mod h_1\]
+
+\colsni{talchè}{such that}
+
+\[\alpha_1 + \alpha_2 = h_1 \cdot \delta_2\]
+
+\colsni{e posto}{}
+
+\[\alpha_2^2 + q = h_1 \cdot h_2\]
+
+\colsni{si trasforma la $(h, \alpha_1, h_1)$ nell'equivalente
+  $(h, \alpha_2, h_2)$: su questa si opera come sulle precedenti; e
+  così si continua, finchè si giunge ad una forma}
+%
+{}
+
+\[(h_{s-1}, \alpha_s, h_s)\]
+
+\colsni{nella quale $h_s > h_{s-1} > 2|\alpha_s|$; questa è una forma
+  ridotta, e se è equivalente alla $(1, 0, q)$ dev'essere
+  $h_{s-1} = 1$, $\alpha_s = 0$.
+
+  Ad ogni modo $h_{s-1}$ è il minimo coefficiente dell'equaz.}
+%
+{}
+
+\[x^2 + qy^2 = h \cdot m\]
+
+\colsni{corrispondente alla radice $\alpha$ della cong.}
+%
+{}
+
+\[x^2 + q \equiv 0 \mod m.\]
+
+\cols{Il metodo delle ridotte coincide perciò col metodo del minimo
+  coefficiente.--- Confrontiamo quindi quest'ultimo col metodo delle
+  divisioni successive.
+
+  Riteniamo le notazioni precedenti}
+%
+{}
+
+\begin{align*}
+  \alpha^2   + q &= h   \cdot m      & \alpha      + \alpha_1 &= h_1 \cdot \delta_1\footnotemark{} \\
+  \alpha_1^2 + q &= h_1 \cdot h      & \alpha_1    + \alpha_2 &= h_1 \cdot \delta_2\\
+  \alpha_2^2 + q &= h_2 \cdot h_1    & \alpha_2    + \alpha_3 &= h_2 \cdot \delta_3\\
+  &\cdots&&\cdots\\
+  \alpha_s^2 + q &= h_s \cdot h_{s-1} & \alpha_{s-1} + \alpha_s &= h_{s-1} \cdot \delta_s\\
+\end{align*}
+
+\footnotetext{\emph{Sic}.}
+
+\colsni{dove supponiamo $\alpha < \frac{m}{2}$, $h_s > h_{s-1}$,
+  mentre $h_i < h_{i-1}$ per $i = s-1, s-2, \ldots, 2, 1$; talchè,
+  come abbiamo notato, $h_{s-1}$ è il minimo coefficiente
+  dell'equazione $x^2 + qy^2 = h_\lambda \cdot m$, relativo alla
+  radice $\alpha$ della cong.\ $x^2 + q \equiv 0 \mod m$. Ora, posto
+  $\alpha = x_1$, $m - \alpha = x_0$, sviluppiamo il sistema di
+  divisioni $(m, x_0)$, trovando $y_r = 1$, $y_{r-1} = [1, q_1]$,
+  $y_{r-2} = [1, q_1, q_2]$, \dots,
+  $y_1 = [1, q_1, q_2, \ldots, q_{r-1}]$, si formi lo specchio}
+%
+{}
+
+\begin{equation}
+  \tag{S}
+  \left\{
+    \begin{array}{rllllllll}
+      x_1 & x_2 & \cdots & x_{u-1} & x_u & x_{u+1} & \cdots &  x_{r-1} & x_r = 1  \\
+      y_r = 1 & y_{r-1} & \cdots & y_{r-u+2} & y_{r-u+1} & y_{r-u} & \cdots & y_2 & y_1 
+    \end{array}
+  \right.
+\end{equation}
+
+\cols{Come sappiamo, due termini qualunque appartenenti alla stessa
+  colonna soddisfano alla congruenza}
+%
+{}
+
+\[x^2 + qy^2 \equiv 0 \mod m\]
+
+\colsni{e se alla radice considerata $\alpha = x_1$ corrisponde una
+  soluzione (propria) dell'eq.\ $x^2 + qy^2 = m$, essa dovrà trovarsi
+  necessariamente in una colonna di~\eqref{S}. --- E precisamente, se
+  $y_{r-u+1}$ è il \ordinalnum{1} termine della \ordinalnum{2}[f]
+  linea che supera il corrispondente $x_u$ della \ordinalnum{1}[f]
+  (procedendo da sinistra verso destra), talchè $x_{u-1}$ sarà il
+  primo termine della \ordinalnum{1}[f] linea che supera il
+  corrispondente della \ordinalnum{2}[f] $y_{r-u+2}$, procedendo da
+  destra verso sinistra, una soluzione sarà $(x_u, y_{r-u+1})$ oppure
+  $(x_{u-1}, y_{r-u+2})$. --- Ora dalle}
+%
+{}
+
+\begin{gather*}
+  \alpha^2 + q = h \cdot m\\
+  \alpha_1^2 + q = h_1 \cdot h
+\end{gather*}
+
+\colsni{si trae}{}
+
+\[(\alpha \alpha_1 \pm q)^2 + q(\alpha \mp \alpha_1)^2 = h^2 \cdot h_1 \cdot m\]
+
+\colsni{e poichè, come abbiamo visto (uno dei due termini)
+  $\alpha \alpha_1 \pm q$ è divisibile per $h$; e così (uno dei due)
+  $\alpha \mp \alpha_1$, posto}
+%
+{}
+
+\[\alpha \alpha_1 \pm q = h\cdot \alpha_1 \qquad
+  \alpha \mp \alpha_1 = h \cdot b_1\]
+
+\colsni{avremo}{}
+
+\[\alpha_1^2 + qb_1^2 = h_1 \cdot m\]
+
+\colsni{dove, essendo $h_1 < h$, $h_1 m < hm$, sarà
+  $a_1 < a = x_1 < \frac{m}{2}$, $b_1 < \frac{m}{2}$.
+
+  Ora}
+%
+{}
+
+\[\alpha \alpha_1 \pm q \equiv \pm q \mod x_1 \qquad
+  h \cdot m \equiv -q \mod x_1\]
+
+\colsni{quindi:}{}
+
+\begin{align*}
+  \alpha \alpha_1 \pm q &\equiv hm \mod x_1\\
+  h \cdot a_1 &\equiv hm \mod x_1
+\end{align*}
+
+\colsni{e poichè $h$ è primo con $x_1$}
+%
+{}
+
+\[a_1 \equiv m \mod x_1\]
+
+\colsni{cioè}{}
+
+\[m - x_1 = x_0 \equiv a_1 \mod x_1.\]
+
+\cols{Perciò $a_1$ non è che il resto $x_2$ della divisione di $x_0$
+  per $x_1$: essendo poi}
+%
+{}
+
+\[x_2^2 + qy_{r-1}^2 \equiv 0 \qquad
+  x_2^2 + qb_1^2 \equiv 0 \mod m\]
+
+\colsni{con $y_{r-1} < \frac{m}{2}$, $b_1 < \frac{m}{2}$, sarà ancora
+  $b_1 = y_{r-1}$.
+
+  Procedendo ancora, dalle}
+%
+{}
+
+\[a_1^2 + qb_1^2 = h_1 \cdot m\qquad
+  \alpha_2^2 + q = h_1 \cdot h_2\]
+
+\colsni{si trae}{}
+
+\[(a_1 \alpha_2 \pm qb_1)^2 + q(a_1 \mp b_1 \alpha_2)^2 = h_1^2 \cdot h_2 \cdot m.\]
+
+\cols{E poichè uno dei due numeri $a_1 \alpha_2 \pm qb_1$ (e così per
+  $a_1 \mp b_1 \alpha_2$) è divisibile per $h_1$, posto:}
+%
+{}
+
+\[a_1 \alpha_2 \pm qb_1 = h_1 \cdot a_2\qquad
+  a_1 \mp b_1 \alpha_2 = h_1 \cdot b_2\]
+
+\colsni{avremo}{}
+
+\[a_2^2 + qb_2^2 = h_2 \cdot m\]
+
+\colsni{dove, essendo}{}
+
+\[a_2^2 + qb_2^2 < h_1 \cdot m = x_1^2 + q,\]
+
+\colsni{sarà}{}
+
+\[a_2 < x_1 < \frac{m}{2};\quad b_2 < \frac{m}{2}.\]
+
+\cols{Ora}{}
+
+\[a_1 \alpha_2 \pm qb_1 \equiv \pm qb_1 \mod a_1;\]
+
+\colsni{cioè}{}
+
+\[a_2 h_1 \equiv \pm qb_1 \mod x_2.\]
+
+\cols{Poscia}{}
+
+\begin{gather*}
+  h_1 \cdot m = x_2^2 + qy_{r-1}^2 \equiv
+  qy_{r-1}^2 \equiv qb_1^2 \mod x_2\\
+  m = x_0 + x_1 = q_1 x_1 + x_2 + x_1 = (1 + q_1) x_1 + x_2 =
+  b_1 x_1 + x_2 \equiv b_1 x_1 \mod x_2
+\end{gather*}
+
+\colsni{perciò}{}
+
+\begin{align*}
+  h_1 \cdot b_1 \cdot x_1 &\equiv qb_1^2 \mod x_2\\
+  h_1x_1 &\equiv qb_1 \mod x_2\\
+  a_2h_1 &\equiv h_1b_1 \mod x_2\\
+  a_2 &\equiv x_1 \mod x_2.
+\end{align*}
+
+\cols{Così}{}
+
+\begin{gather*}
+  a_1 \pm b_1 \alpha_2 = h_1 \cdot b_2 \equiv a_1 \mod b_1\\
+  m h_1 = a_1^2 + qb_1^2 \equiv a_1^2 \mod b_1\\
+  m = x_{??} y_{r-1} + x_2 = x_1 b_1 + a_1 \equiv a_1 \mod b_1\\
+  h_1 m \equiv h_1 a_1 \equiv a_1^2 \bmod b_1\qquad
+  h_1 \equiv a_1 \bmod b_1\qquad
+  b_2 \equiv 1 \bmod b_1.
+\end{gather*}
+
+\cols{Ora, se fosse $b_2 < b_1$ non potrebb'essere che $b_2 = 1$, e
+  quindi $a_2 = x_1$; il che è assurdo; sarà perciò $b_2 > b_1$, e
+  dacchè}
+%
+{}
+
+\[a_2^2 + qb_2^2 = h_2 \cdot m < h_1 \cdot m = a_1^2 + qb_1^2\]
+
+\colsni{sarà certamente $a_2 < a_1$; laonde $a_2 = x_3$ resto della
+  divisione di $x_1$ per $x_2$. Allora anche $b_2 = y_{r-2}$.
+
+  Si ricava poi dalle}
+%
+{}
+
+\begin{gather*}
+  a_2^2 + qb_2^2 = h_2 \cdot m \qquad
+  \alpha_3^2 + q = h_2 \cot h_3\\
+  (a_2 \alpha_3 \pm qb_2)^2 + q(a_2 \mp \alpha_3 b_2)^2 = h_2^2 \cdot h_3 \cdot m
+\end{gather*}
+
+\colsni{ed essendo}{}
+
+\[a_2 \alpha_3 \pm qb_2 \equiv 0 \mod h_2
+  \qquad;\qquad
+  a_2 \mp \alpha_3 b_2 \equiv 0 \mod h_2,\]
+
+\colsni{si avrà}{}
+
+\[a_3^2 + qb_3^2 = h_3 \cdot m.\]
+
+\cols{Ora}{}
+
+\begin{gather*}
+  h_2 \cdot a_3 = a_2 \alpha_3 \pm qb_2 \equiv \pm qb_2 \bmod a_2\qquad
+  h_2 m \equiv qb_2^2 \mod a_2\\
+  m = x_0 + x_1 = x_1 b_1 + a_1 = (q_2 a_1 + a_2)b_1 + a_1 \equiv
+  a_1(1 + q_2b_1) \equiv a_1 \cdot b_2 \mod a_2\\
+  h_2 \cdot m \equiv h_2 a_1 b_2 \equiv qb_2^2 \bmod a_2
+  \qquad;\qquad
+  h_2 a_1 \equiv qb_2 \bmod a_2\\
+  a_3 \equiv a_1 \mod a_2.
+\end{gather*}
+
+\cols{Così si trova}{}
+
+\[b_3 \equiv b_1 \mod b_2.\]
+
+\cols{Ora se fosse $b_3 < b_2$, essendo anche $b_1 < b_2$, ne verrebbe
+  $b_3 = b_1$; e però anche $a_3 = a_1$, $h_3 = h_1$; mentre invece
+  $h_3 < h_1$; perciò $b_3 > b_2$, $a_3 < a_2$ e precisamente
+  $a_3 = x_4$ resto della divisione di $x_2 = a_1$ per $x_3 = a_2$. Di
+  conseguenza $b_3 = y_{r-3}$.
+
+  È ormai palese che i coefficienti $h_i$ e le soluzioni $(a_i, b_i)$
+  delle equazioni}
+%
+{}
+
+\[x^2 + qy^2 = h_i \cdot m\qquad (i = 1, 2, 3, \ldots)\]
+
+\colsni{che si ottengono dalle equazioni:}
+%
+{}
+
+\begin{align*}
+  \alpha^2      + q &= h \cdot m\\
+  \alpha_1^2    + q &= h_1 \cdot h\\
+  \alpha_2^2    + q &= h_2 \cdot h_1\\
+  &\cdots\\
+  \alpha_{s-1}^2 + q &= h_{s-1} \cdot h_{s-2}\\  
+\end{align*}
+
+\colsni{coincidono con le soluzioni $(x_\lambda, y_{r-\lambda+1})$ e
+  coi relativi coefficienti che si ottengono col metodo delle
+  divisioni successive.
+
+  Possiamo quindi concludere che il metodo delle divisioni successive
+  per la risoluzione dell'equaz.}
+%
+{}
+
+\[x^2 + qy^2 = m\qquad (q > 0)\]
+
+\colsni{equivale in sostanza al metodo della teoria delle \emph{forme
+    ridotte} (e dell'equivalenza delle forme).
+
+  Il nostro metodo dà alle operazioni una disposizione più comoda, che
+  permette di giungere con maggiore rapidità e sicurezza al risultato
+  voluto.
+
+  Se $x_0 = m - x_1$ è una radice della cong.\
+  $x^2 + q \equiv 0 \mod m$ $\left(x_0 > \frac{m}{2}\right)$ sia
+  $x_1, x_2, \ldots, x_r = 1$ la successione dei resti,
+  $q_0 = 1, q_1, q_2, \ldots, q_{r-1}$ la successione dei quozienti
+  nel sistema di divisioni $(m, x_0)$.---Formate le quantità:}
+%
+{}
+
+\[y_r =1, y_{r-1} = [1,q_1], y_{r-2}=[1,q_1,q_2], \ldots
+  y_1 = [1, q_1, q_2, \ldots, q_{r-1}\]
+
+\colsni{e con esse lo specchio}{}
+
+\begin{equation}
+  \tag{S}
+  \left\{
+    \begin{array}{rlllllll}
+      x_1 & x_2 & \cdots & x_{u-1} & x_u & x_{u+1} & \cdots &  x_r = 1  \\
+      y_r = 1 & y_{r-1} & \cdots & y_{r-u+2} & y_{r-u+1} & y_{r-u} & \cdots & y_1 
+    \end{array}
+  \right.
+\end{equation}
+
+\colsni{se alla radice considerata $x_0$ corrisponde una soluzione
+  dell'equaz.\ $x^2 + qy^2 = m$, essa deve trovarsi in una delle
+  colonne di~\eqref{S}; e precisamente, se $y_{r-u+1}$ è il primo
+  termine della \ordinalnum{2}[f] linea di~\eqref{S} che supera in
+  corrispondente $x_u$ della \ordinalnum{1}[f], questa soluzione è
+  data da $(x_u, y_{r-u+1})$ oppure da $(x_{u-1}, y_{r-u+2})$.
+
+  Se si costruiscono le quantità $y_{r-i}$, man mano che si
+  determinano le corrispondenti $x_{i+1}$ mediante il sistema di
+  divisioni $(m, x_0)$, si può arrestare la operazione al punto in cui
+  si ottiene un primo $y_{r-i}$ che supera il corrispondente
+  $x_{i+1}$. --- Il numero delle divisioni che bisogna eseguire per
+  giungere a questo $x_{i+1}$ è precisamente uguale al numero dei
+  tentativi che bisogna fare per passare dalla forma $(m, x_1, h)$
+  alla relativa ridotta.--- Al processo delle divisioni $(m, x_0)$
+  corrisponde il processo che dalla forma $(m, x_1, h)$ mediante una
+  catena di forme successivamente contigue, conduce alla relativa
+  ridotta.--- Al processo di formazione delle quantità
+  $y_r, y_{r-1}, y_{r-2}, \ldots, y_2, y_1$ corrisponde il processo di
+  composizione delle varie sostituzioni che conducono da una forma
+  alla sua contigua a destra.
+
+  Ma il metodo delle divisioni successive offre il vantaggio che si
+  può fare a meno della formazione delle quantità
+  $y_r, y_{r-1}, \ldots, y_1$.--- Nel sistema di divisioni $(m, x_0)$
+  basta arrestarsi al primo resto $x_u$, il cui quadrato non supera
+  $m$. --- La soluzione cercata (se v'è) dell'equazione
+  $x^2 + qy^2 = m$ sarà allora $(x_u, y_{r-u+1})$.
+
+  Inoltre il metodo delle divisioni successive si può applicare,
+  sebbene non sempre con risultati decisivi, alla risoluzione
+  dell'equaz.\ generale}
+%
+{}
+
+\[\sum_{h=0}^n C_h x^{n-h} \cdot y^h = m.\]
 
 \secbreak
 
